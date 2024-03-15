@@ -288,7 +288,7 @@ public class OnePieceFashtion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelHeader.setBackground(new java.awt.Color(56, 106, 165));
+        panelHeader.setBackground(new java.awt.Color(255, 51, 51));
         panelHeader.setPreferredSize(new java.awt.Dimension(561, 50));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/close.png"))); // NOI18N
@@ -339,7 +339,7 @@ public class OnePieceFashtion extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(null);
 
-        menus.setBackground(new java.awt.Color(56, 106, 165));
+        menus.setBackground(new java.awt.Color(255, 51, 51));
         menus.setLayout(new javax.swing.BoxLayout(menus, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(menus);
 
