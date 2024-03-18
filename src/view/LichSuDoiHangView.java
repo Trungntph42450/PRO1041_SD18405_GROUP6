@@ -181,6 +181,7 @@ public class LichSuDoiHangView extends javax.swing.JPanel {
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(255, 204, 204));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Phiếu đổi hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         jLabel19.setText("Mã đổi hàng:");
