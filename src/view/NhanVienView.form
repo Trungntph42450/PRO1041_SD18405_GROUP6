@@ -80,7 +80,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="tabs" min="-2" pref="180" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnPrev" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="btnNext" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
@@ -171,7 +171,6 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtSDT" alignment="0" pref="225" max="32767" attributes="0"/>
                           <Component id="txtCCCD" alignment="0" pref="225" max="32767" attributes="0"/>
-                          <Component id="txtNgayVaoLam" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="rdoDangLamViec" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -256,8 +255,7 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtNgayVaoLam" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="rdoDangLamViec" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="rdoNghiViec" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -434,8 +432,6 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAnhNVMouseClicked"/>
               </Events>
             </Component>
-            <Component class="com.toedter.calendar.JDateChooser" name="txtNgayVaoLam">
-            </Component>
             <Component class="javax.swing.JTextField" name="txtMaNV">
             </Component>
             <Component class="javax.swing.JTextField" name="txtUserName">
@@ -474,10 +470,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="cboGioiTinh" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboDiaChi" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnRSDiaChiNV" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cboGioiTinh" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cboDiaChi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
