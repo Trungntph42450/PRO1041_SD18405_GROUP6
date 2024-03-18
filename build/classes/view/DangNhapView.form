@@ -18,6 +18,8 @@
         <Property name="text" type="java.lang.String" value="jLabel4"/>
       </Properties>
     </Component>
+    <Component class="java.awt.Canvas" name="canvas1">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>

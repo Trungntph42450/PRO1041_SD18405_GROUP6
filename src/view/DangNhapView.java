@@ -95,6 +95,7 @@ public class DangNhapView extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
         jLabel4 = new javax.swing.JLabel();
+        canvas1 = new java.awt.Canvas();
         PanelMain = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -364,6 +365,7 @@ public class DangNhapView extends javax.swing.JFrame {
     private javax.swing.JPanel PanelMain;
     private javax.swing.JButton btnDangNhap;
     private javax.swing.JButton btnThoat;
+    private java.awt.Canvas canvas1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

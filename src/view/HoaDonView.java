@@ -71,7 +71,7 @@ public class HoaDonView extends javax.swing.JPanel {
             });
         }
     }
-    
+
     public String phanCach(Double x) {
         NumberFormat fm = NumberFormat.getNumberInstance(Locale.US);
         return fm.format(x);
@@ -176,10 +176,8 @@ public class HoaDonView extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHoaDon = new javax.swing.JTable();
         lbSoTrang = new javax.swing.JLabel();
-        btnDau1 = new javax.swing.JButton();
         btnLui1 = new javax.swing.JButton();
         btnTien1 = new javax.swing.JButton();
-        btnCuoi1 = new javax.swing.JButton();
         pnlTong = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -205,6 +203,9 @@ public class HoaDonView extends javax.swing.JPanel {
 
         panelTong.setLayout(new java.awt.CardLayout());
 
+        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setToolTipText("");
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Danh sách hóa đơn"));
 
         tblHoaDon.setModel(new javax.swing.table.DefaultTableModel(
@@ -227,13 +228,7 @@ public class HoaDonView extends javax.swing.JPanel {
 
         lbSoTrang.setText("Số trang");
 
-        btnDau1.setText("Đầu");
-        btnDau1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDau1ActionPerformed(evt);
-            }
-        });
-
+        btnLui1.setForeground(new java.awt.Color(0, 0, 51));
         btnLui1.setText("Lùi");
         btnLui1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,17 +236,11 @@ public class HoaDonView extends javax.swing.JPanel {
             }
         });
 
+        btnTien1.setForeground(new java.awt.Color(0, 0, 51));
         btnTien1.setText("Tiến");
         btnTien1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTien1ActionPerformed(evt);
-            }
-        });
-
-        btnCuoi1.setText("Cuối");
-        btnCuoi1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCuoi1ActionPerformed(evt);
             }
         });
 
@@ -265,16 +254,12 @@ public class HoaDonView extends javax.swing.JPanel {
                         .addGap(14, 14, 14)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(btnDau1)
-                        .addGap(18, 18, 18)
+                        .addGap(175, 175, 175)
                         .addComponent(btnLui1)
                         .addGap(44, 44, 44)
                         .addComponent(lbSoTrang)
                         .addGap(44, 44, 44)
-                        .addComponent(btnTien1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCuoi1)))
+                        .addComponent(btnTien1)))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -285,15 +270,15 @@ public class HoaDonView extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnDau1)
                         .addComponent(btnLui1)
-                        .addComponent(btnTien1)
-                        .addComponent(btnCuoi1))
+                        .addComponent(btnTien1))
                     .addComponent(lbSoTrang))
                 .addContainerGap())
         );
 
+        pnlTong.setBackground(new java.awt.Color(255, 204, 204));
         pnlTong.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hóa đơn", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        pnlTong.setForeground(new java.awt.Color(0, 0, 51));
 
         jLabel1.setText("Mã hóa đơn");
 
@@ -309,13 +294,22 @@ public class HoaDonView extends javax.swing.JPanel {
 
         jLabel7.setText("Ghi chú");
 
+        txtMaHoaDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMaHoaDonActionPerformed(evt);
+            }
+        });
+
         txtMaKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMaKhachHangActionPerformed(evt);
             }
         });
 
-        btnDoiHang.setText("Đổi hàng");
+        btnDoiHang.setBackground(new java.awt.Color(0, 153, 102));
+        btnDoiHang.setForeground(new java.awt.Color(255, 255, 255));
+        btnDoiHang.setText("Đổi Hàng");
+        btnDoiHang.setToolTipText("");
         btnDoiHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoiHangActionPerformed(evt);
@@ -396,6 +390,7 @@ public class HoaDonView extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(51, 255, 204));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông tin sản phẩm"));
 
         tblLoaiSanPham.setModel(new javax.swing.table.DefaultTableModel(
@@ -550,13 +545,6 @@ public class HoaDonView extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnDoiHangActionPerformed
 
-    private void btnDau1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDau1ActionPerformed
-        // TODO add your handling code here:
-        trangHD = 1;
-        fillTableHoaDon(serviceHD.listPageHD(trangHD));
-        lbSoTrang.setText(trangHD + " of " + soTrangHD);
-    }//GEN-LAST:event_btnDau1ActionPerformed
-
     private void btnLui1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLui1ActionPerformed
         // TODO add your handling code here:
         if (trangHD > 1) {
@@ -575,17 +563,12 @@ public class HoaDonView extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnTien1ActionPerformed
 
-    private void btnCuoi1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuoi1ActionPerformed
+    private void txtMaHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMaHoaDonActionPerformed
         // TODO add your handling code here:
-        trangHD = soTrangHD;
-        fillTableHoaDon(serviceHD.listPageHD(trangHD));
-        lbSoTrang.setText(trangHD + " of " + soTrangHD);
-    }//GEN-LAST:event_btnCuoi1ActionPerformed
+    }//GEN-LAST:event_txtMaHoaDonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCuoi1;
-    private javax.swing.JButton btnDau1;
     private javax.swing.JButton btnDoiHang;
     private javax.swing.JButton btnLui1;
     private javax.swing.JButton btnTien1;

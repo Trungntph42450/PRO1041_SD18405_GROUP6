@@ -45,6 +45,9 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Thi&#x1ebf;t l&#x1ead;p tr&#xf4;ng tin kh&#xe1;ch h&#xe0;ng">
@@ -244,6 +247,12 @@
         </Container>
         <Component class="javax.swing.JButton" name="btnThem">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="99" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
           </Properties>
           <Events>
@@ -252,6 +261,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnCapNhat">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="99" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
           </Properties>
           <Events>
@@ -260,6 +275,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLamMoi">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="99" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
           </Properties>
           <Events>
@@ -272,6 +293,9 @@
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Th&#xf4;ng tin kh&#xe1;ch h&#xe0;ng">
@@ -294,19 +318,15 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
-                          <Component id="btnDau" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
                           <Component id="btnLui" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="lblSoTrangKH" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Component id="btnTien" min="-2" pref="69" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="btnCuoi" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
@@ -327,13 +347,11 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnDau" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="btnLui" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblSoTrangKH" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="btnTien" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnCuoi" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
@@ -477,12 +495,16 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel8" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="btnReset" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="btnReset" min="-2" pref="77" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -497,9 +519,9 @@
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="cboDiaChi" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnReset" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <Component id="btnReset" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -549,6 +571,12 @@
             </Component>
             <Component class="javax.swing.JToggleButton" name="btnReset">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="66" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Reset"/>
               </Properties>
               <Events>
@@ -561,14 +589,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="S&#x1ed1; trang"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnDau">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x110;&#x1ea7;u"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnDauMouseClicked"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnLui">
           <Properties>
@@ -584,14 +604,6 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnTienMouseClicked"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnCuoi">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cu&#x1ed1;i"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCuoiMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>

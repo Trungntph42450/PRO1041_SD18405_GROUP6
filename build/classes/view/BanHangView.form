@@ -39,8 +39,6 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pnlWebCam" min="-2" pref="290" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
@@ -58,10 +56,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jPanel5" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                              <Component id="pnlWebCam" min="-2" pref="191" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -183,9 +178,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Component id="btnQR" min="-2" pref="91" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
                               <Component id="btnXoaSP" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="btnXoaTatCaSP" min="-2" pref="106" max="-2" attributes="0"/>
@@ -212,7 +205,6 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnXoaSP" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="btnXoaTatCaSP" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="btnQR" min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="txtTest" alignment="3" max="32767" attributes="0"/>
                           <Component id="btnSuaSP" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
@@ -314,14 +306,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtTest">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnQR">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Qu&#xe9;t QR"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQRActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnSuaSP">
               <Properties>
@@ -860,22 +844,6 @@
               </Events>
             </Component>
           </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="pnlWebCam">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder>
-                  <Color PropertyName="color" blue="0" green="ff" red="ff" type="rgb"/>
-                </LineBorder>
-              </Border>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="33" red="0" type="rgb"/>
-            </Property>
-          </Properties>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
         </Container>
       </SubComponents>
     </Container>

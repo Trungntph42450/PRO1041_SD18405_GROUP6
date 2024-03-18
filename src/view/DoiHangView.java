@@ -439,9 +439,15 @@ public class DoiHangView extends javax.swing.JPanel {
 
         pnlTong.setLayout(new java.awt.CardLayout());
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Đơn đổi hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel4.setBackground(new java.awt.Color(255, 204, 204));
 
-        btnXacNhanDoiHang.setText("Xác nhận đổi hàng");
+        jPanel5.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Đơn đổi hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel5.setForeground(new java.awt.Color(0, 0, 51));
+
+        btnXacNhanDoiHang.setBackground(new java.awt.Color(0, 153, 102));
+        btnXacNhanDoiHang.setForeground(new java.awt.Color(255, 255, 255));
+        btnXacNhanDoiHang.setText("Xác Nhận Đổi Hàng");
         btnXacNhanDoiHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnXacNhanDoiHangActionPerformed(evt);
@@ -596,6 +602,7 @@ public class DoiHangView extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 204, 204));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách sản phẩm cũ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         tblDanhSachSPCu.setModel(new javax.swing.table.DefaultTableModel(
@@ -633,6 +640,8 @@ public class DoiHangView extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnChonHang.setBackground(new java.awt.Color(0, 153, 102));
+        btnChonHang.setForeground(new java.awt.Color(255, 255, 255));
         btnChonHang.setText("Chọn sản phẩm đổi");
         btnChonHang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -640,6 +649,8 @@ public class DoiHangView extends javax.swing.JPanel {
             }
         });
 
+        btnLamMoiDSDH.setBackground(new java.awt.Color(0, 153, 102));
+        btnLamMoiDSDH.setForeground(new java.awt.Color(255, 255, 255));
         btnLamMoiDSDH.setText("Làm mới");
         btnLamMoiDSDH.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -652,6 +663,7 @@ public class DoiHangView extends javax.swing.JPanel {
             }
         });
 
+        btnQuayLai.setForeground(new java.awt.Color(51, 0, 51));
         btnQuayLai.setText("Hủy");
         btnQuayLai.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -713,6 +725,7 @@ public class DoiHangView extends javax.swing.JPanel {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel8.setBackground(new java.awt.Color(255, 204, 204));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách sản phẩm mới", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         tblDanhSachSPMoi.setModel(new javax.swing.table.DefaultTableModel(
@@ -776,9 +789,9 @@ public class DoiHangView extends javax.swing.JPanel {
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnQuayLai, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnLamMoiDSDH, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
+                                    .addComponent(btnLamMoiDSDH, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnQuayLai, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -789,7 +802,7 @@ public class DoiHangView extends javax.swing.JPanel {
                                         .addComponent(btnChonHang)))))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -799,7 +812,7 @@ public class DoiHangView extends javax.swing.JPanel {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnQuayLai, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnQuayLai, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnLamMoiDSDH, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -839,7 +852,7 @@ public class DoiHangView extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlTong, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+            .addComponent(pnlTong, javax.swing.GroupLayout.PREFERRED_SIZE, 720, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

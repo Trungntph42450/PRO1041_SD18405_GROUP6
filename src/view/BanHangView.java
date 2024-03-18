@@ -631,7 +631,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         btnXoaSP = new javax.swing.JButton();
         btnXoaTatCaSP = new javax.swing.JButton();
         txtTest = new javax.swing.JTextField();
-        btnQR = new javax.swing.JButton();
         btnSuaSP = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -670,7 +669,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         txtTenEV = new javax.swing.JTextField();
         txtMucGiam = new javax.swing.JTextField();
         btnHuyDonHang = new javax.swing.JButton();
-        pnlWebCam = new javax.swing.JPanel();
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hóa đơn chờ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
@@ -776,13 +774,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
             }
         });
 
-        btnQR.setText("Quét QR");
-        btnQR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQRActionPerformed(evt);
-            }
-        });
-
         btnSuaSP.setText("Sửa sản phẩm");
         btnSuaSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -798,9 +789,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(btnQR, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(123, 123, 123)
                         .addComponent(btnXoaSP)
                         .addGap(35, 35, 35)
                         .addComponent(btnXoaTatCaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -822,7 +811,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnXoaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnXoaTatCaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnQR, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTest)
                     .addComponent(btnSuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1171,9 +1159,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        pnlWebCam.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0)));
-        pnlWebCam.setForeground(new java.awt.Color(0, 51, 255));
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1183,8 +1168,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlWebCam, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1198,9 +1181,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnlWebCam, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1370,21 +1351,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         fillDonHang2();
         tinhThua();
     }//GEN-LAST:event_btnXoaSPActionPerformed
-
-    private void btnQRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQRActionPerformed
-        // TODO add your handling code here:
-        try {
-            if (webcam.isOpen()) {
-                webcam.close();
-            } else {
-                pnlWebCam.removeAll();
-                pnlWebCam.revalidate();
-                pnlWebCam.repaint();
-                initWebcam();
-            }
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_btnQRActionPerformed
 
     private void btnThanhToanBH2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanBH2ActionPerformed
         if (txtTienThuaBH2.getText().contains("-")) {
@@ -1679,7 +1645,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
     private javax.swing.JButton btnDau2;
     private javax.swing.JButton btnHuyDonHang;
     private javax.swing.JButton btnLui2;
-    private javax.swing.JButton btnQR;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnSuaSP;
     private javax.swing.JButton btnTaoHoaDonCho;
@@ -1712,7 +1677,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel lbSoTrang2;
-    private javax.swing.JPanel pnlWebCam;
     private javax.swing.JTable tblChiTietSanPham;
     private javax.swing.JTable tblGioHang;
     private javax.swing.JTable tblHoaDonCho;

@@ -89,15 +89,21 @@ public class DoiMatKhauView extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         txtMatKhauM2 = new javax.swing.JPasswordField();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
+        setBackground(new java.awt.Color(255, 204, 204));
+
+        jLabel1.setBackground(new java.awt.Color(51, 0, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("ĐỔI MẬT KHẨU");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setText("Nhập lại mật khẩu mới");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel4.setText("Nhập Lại Mật Khẩu Mới");
 
-        btnHuyBo.setBackground(new java.awt.Color(204, 0, 51));
-        btnHuyBo.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        btnHuyBo.setBackground(new java.awt.Color(0, 153, 102));
+        btnHuyBo.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnHuyBo.setForeground(new java.awt.Color(255, 255, 255));
         btnHuyBo.setText("HỦY BỎ");
         btnHuyBo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -116,8 +122,9 @@ public class DoiMatKhauView extends javax.swing.JPanel {
             }
         });
 
-        btnCapNhatMK.setBackground(new java.awt.Color(51, 204, 255));
-        btnCapNhatMK.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        btnCapNhatMK.setBackground(new java.awt.Color(0, 153, 102));
+        btnCapNhatMK.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btnCapNhatMK.setForeground(new java.awt.Color(255, 255, 255));
         btnCapNhatMK.setText("CẬP NHẬT");
         btnCapNhatMK.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -130,8 +137,9 @@ public class DoiMatKhauView extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setText("Mật khẩu hiện tại");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel3.setText("Mật Khẩu Hiện Tại");
 
         txtMatKhauHT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,11 +147,13 @@ public class DoiMatKhauView extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setText("Mã tài khoản");
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel5.setText("Mã Tài Khoản");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Mật khẩu mới");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 51));
+        jLabel2.setText("Nhập Mật Khẩu Mới");
 
         txtMatKhauM2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,32 +166,34 @@ public class DoiMatKhauView extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(219, 219, 219)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel5)
-                    .addComponent(txtMaTK, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtMatKhauHT, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMatKhauM, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMatKhauM2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(219, 219, 219)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel5)
+                            .addComponent(txtMaTK, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtMatKhauHT, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+                            .addComponent(txtMatKhauM, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(142, 142, 142)
+                                .addComponent(btnCapNhatMK, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(125, 125, 125)
+                                .addComponent(btnHuyBo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMatKhauM2)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(btnCapNhatMK)
-                        .addGap(147, 147, 147)
-                        .addComponent(btnHuyBo, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(356, Short.MAX_VALUE))
+                        .addGap(456, 456, 456)
+                        .addComponent(jLabel1)))
+                .addContainerGap(364, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(txtMaTK, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
