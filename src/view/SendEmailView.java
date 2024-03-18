@@ -67,6 +67,8 @@ public class SendEmailView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("SEND EMAIL");
 
+        btnSend.setBackground(new java.awt.Color(0, 153, 102));
+        btnSend.setForeground(new java.awt.Color(255, 255, 255));
         btnSend.setText("SEND");
         btnSend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +120,8 @@ public class SendEmailView extends javax.swing.JFrame {
         txtMessage.setRows(5);
         jScrollPane1.setViewportView(txtMessage);
 
+        btnDinhKem.setBackground(new java.awt.Color(0, 153, 102));
+        btnDinhKem.setForeground(new java.awt.Color(255, 255, 255));
         btnDinhKem.setText("Đính Kèm");
         btnDinhKem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +174,8 @@ public class SendEmailView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jToggleButton1.setBackground(new java.awt.Color(0, 153, 102));
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("EXIT");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
