@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/BanHangView.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/MenuItem.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/DangNhapView.java</file>
@@ -11,6 +12,9 @@
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ChonChiTietSanPhamView.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ChiTietSanPhamView.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/SanPhamView.java</file>
+=======
+
+>>>>>>> 863c3113f24bd0b0b3818e339515655ed3e8503d
         </group>
     </open-files>
 </project-private>
