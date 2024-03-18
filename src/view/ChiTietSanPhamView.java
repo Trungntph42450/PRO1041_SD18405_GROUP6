@@ -567,14 +567,14 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             }
         });
 
-        btnLui2.setText("Lùi");
+        btnLui2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lui.png"))); // NOI18N
         btnLui2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLui2ActionPerformed(evt);
             }
         });
 
-        btnTien2.setText("Tiến");
+        btnTien2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/tien.png"))); // NOI18N
         btnTien2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTien2ActionPerformed(evt);
@@ -664,11 +664,11 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(374, 374, 374)
+                        .addGap(471, 471, 471)
                         .addComponent(btnLui2)
-                        .addGap(41, 41, 41)
+                        .addGap(38, 38, 38)
                         .addComponent(lbSoTrang2)
-                        .addGap(44, 44, 44)
+                        .addGap(43, 43, 43)
                         .addComponent(btnTien2))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
@@ -724,12 +724,17 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
                     .addComponent(btnQuayLai))
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTien2)
-                    .addComponent(lbSoTrang2)
-                    .addComponent(btnLui2))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addComponent(lbSoTrang2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel16Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLui2)
+                            .addComponent(btnTien2))
+                        .addContainerGap(12, Short.MAX_VALUE))))
         );
 
         jPanel18.setBackground(new java.awt.Color(204, 204, 204));
@@ -954,7 +959,7 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 772, Short.MAX_VALUE)
+            .addGap(0, 778, Short.MAX_VALUE)
         );
 
         add(jPanel1, "card3");

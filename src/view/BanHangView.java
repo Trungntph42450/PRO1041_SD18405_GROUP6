@@ -876,7 +876,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
             }
         });
 
-        btnLui2.setText("Lùi");
+        btnLui2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lui.png"))); // NOI18N
         btnLui2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLui2ActionPerformed(evt);
@@ -885,7 +885,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
 
         lbSoTrang2.setText("Số trang");
 
-        btnTien2.setText("Tiến");
+        btnTien2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/tien.png"))); // NOI18N
         btnTien2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTien2ActionPerformed(evt);
@@ -967,14 +967,14 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                             .addComponent(cboLocKich, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(219, 219, 219)
+                .addGap(247, 247, 247)
                 .addComponent(btnLui2)
-                .addGap(41, 41, 41)
+                .addGap(49, 49, 49)
                 .addComponent(lbSoTrang2)
-                .addGap(44, 44, 44)
+                .addGap(45, 45, 45)
                 .addComponent(btnTien2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1001,12 +1001,16 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                     .addComponent(btnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTien2)
-                    .addComponent(lbSoTrang2)
-                    .addComponent(btnLui2))
-                .addGap(14, 14, 14))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lbSoTrang2))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLui2)
+                            .addComponent(btnTien2))))
+                .addGap(23, 23, 23))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 204));
