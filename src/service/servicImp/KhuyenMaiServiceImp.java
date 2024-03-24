@@ -20,7 +20,10 @@ public class KhuyenMaiServiceImp implements OnePieceFashtion<Events, String> {
     @Override
     public List<Events> getAll() {
         return repo.getAll();
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0ff301431807c4e60688ed187548f99ecf91e3c5
     }
 
     @Override
@@ -70,7 +73,10 @@ public class KhuyenMaiServiceImp implements OnePieceFashtion<Events, String> {
 
     public Events getActive2(Double so) {
         return repo.getActive2(so);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0ff301431807c4e60688ed187548f99ecf91e3c5
     }
 
     public List<Events> getActive3(Double so) {
