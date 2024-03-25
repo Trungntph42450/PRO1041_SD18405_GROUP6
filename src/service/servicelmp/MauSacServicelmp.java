@@ -7,13 +7,13 @@ package service.servicelmp;
 import java.util.List;
 import model.MauSac;
 import repository.MauSacRepository;
-import service.Onepiece;
+import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class MauSacServicelmp implements Onepiece<MauSac, String>{
+public class MauSacServicelmp implements OnePieceFashtion<MauSac, String>{
     
     MauSacRepository repo = new MauSacRepository();
     

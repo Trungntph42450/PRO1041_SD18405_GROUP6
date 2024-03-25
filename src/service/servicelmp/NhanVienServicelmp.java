@@ -9,13 +9,13 @@ import model.NhanVien;
 import model.TaiKhoan;
 import repository.NhanVienRepository;
 import service.OnePieceFashtion;
-import service.Onepiece;
+import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class NhanVienServicelmp implements Onepiece<NhanVien, String>{
+public class NhanVienServicelmp implements OnePieceFashtion<NhanVien, String>{
     
     NhanVienRepository repo = new NhanVienRepository();
     public TaiKhoan getTK(String ma){

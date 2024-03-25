@@ -7,13 +7,13 @@ package service.servicelmp;
 import java.util.List;
 import model.ChatLieu;
 import repository.ChatLieuRepository;
-import service.Onepiece;
+import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class ChatLieulmp implements Onepiece<ChatLieu, String>{
+public class ChatLieulmp implements OnePieceFashtion<ChatLieu, String>{
         
     ChatLieuRepository repo = new ChatLieuRepository();
 

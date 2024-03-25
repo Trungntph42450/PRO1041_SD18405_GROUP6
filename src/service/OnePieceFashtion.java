@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author ADMIN
  */
-public interface Onepiece<K,E> {
+public interface OnePieceFashtion<K,E> {
     public List<K> getAll();
     public int them(K k);
     public int sua(K k,E e);

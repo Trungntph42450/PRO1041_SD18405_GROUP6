@@ -7,13 +7,13 @@ package service.servicelmp;
 import java.util.List;
 import model.KichThuoc;
 import repository.KichThuocRepository;
-import service.Onepiece;
+import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class KichThuocServicelmp implements Onepiece<KichThuoc, String> {
+public class KichThuocServicelmp implements OnePieceFashtion<KichThuoc, String> {
 
     KichThuocRepository repo = new KichThuocRepository();
 
