@@ -14,7 +14,7 @@ import service.OnePieceFashtion;
  *
  * @author ADMIN
  */
-public class NhanVienServicelmp implements OnePieceFashtion<NhanVien, String>{
+public class NhanVienServiceImp implements OnePieceFashtion<NhanVien, String>{
     
     NhanVienRepository repo = new NhanVienRepository();
     public TaiKhoan getTK(String ma){

@@ -5,30 +5,30 @@
 package service.servicImp;
 
 import java.util.List;
-import model.ChatLieu;
-import repository.ChatLieuRepository;
+import model.KichThuoc;
+import repository.KichThuocRepository;
 import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class ChatLieulmp implements OnePieceFashtion<ChatLieu, String>{
-        
-    ChatLieuRepository repo = new ChatLieuRepository();
+public class KichThuocServiceImp implements OnePieceFashtion<KichThuoc, String> {
+
+    KichThuocRepository repo = new KichThuocRepository();
 
     @Override
-    public List<ChatLieu> getAll() {
+    public List<KichThuoc> getAll() {
         return repo.getAll();
     }
 
     @Override
-    public int them(ChatLieu k) {
+    public int them(KichThuoc k) {
         return repo.them(k);
     }
 
     @Override
-    public int sua(ChatLieu k, String e) {
+    public int sua(KichThuoc k, String e) {
         return repo.sua(k, e);
     }
 
@@ -38,23 +38,25 @@ public class ChatLieulmp implements OnePieceFashtion<ChatLieu, String>{
     }
 
     @Override
-    public ChatLieu getOne(String e) {
+    public KichThuoc getOne(String e) {
         return repo.getOne(e);
     }
 
     @Override
-    public List<ChatLieu> getList(String e) {
+    public List<KichThuoc> getList(String e) {
         return repo.getList(e);
     }
-     public List<ChatLieu> listPageCL(int index){
-        return repo.listPageCL(index);
+
+    public List<KichThuoc> listPageKT(int index) {
+        return repo.listPageKT(index);
     }
-    public int tongBanGhi(){
+
+    public int tongBanGhi() {
         return repo.tongBanGhi();
     }
-    
-    public boolean checkTrungCL(String name1) {
-        return repo.checkTrungCL(name1);
+
+    public boolean checkTrungKT(String name1) {
+        return repo.checkTrungKT(name1);
     }
-    
+
 }
