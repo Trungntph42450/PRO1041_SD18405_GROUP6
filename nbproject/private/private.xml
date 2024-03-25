@@ -3,9 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/ChiTietSanPhamServiceImp.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/TaiKhoanServiceImp.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/KhachHangServiceImp.java</file>
+=======
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/ThuocTinhView.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/NhanVienView.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/MauSacServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhachHangServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/GetUserName.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/NhanVienServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/model/TaiKhoan.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhuyenMaiServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/TaiKhoanServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene2.java</file>
+>>>>>>> 99a48c02d663ad95d1511f56d809d52f5337283c
         </group>
     </open-files>
 </project-private>
