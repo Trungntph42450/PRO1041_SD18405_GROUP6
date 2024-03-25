@@ -7,139 +7,140 @@ package repository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import model.ChatLieu;
+import model.MauSac;
 import util.DBConnect;
 
 /**
  *
- * @author Nguyen Thanh Trung
+ * @author ADMIN
  */
-public class ChatLieuRepository {
-      
+public class MauSacRepository {
+
     PreparedStatement pst = null;
+    Connection conn = null;
     ResultSet rs = null;
     String sql = null;
-    Connection conn = null;
-    List<ChatLieu> listChatLieu = new ArrayList<>();
-    
-    public List<ChatLieu> getAll(){
-        listChatLieu.clear();
+    List<MauSac> listMauSac = new ArrayList<>();
+
+    public List<MauSac> getAll() {
+        listMauSac.clear();
         try {
             conn = DBConnect.getConnection();
-            sql = "SELECT*FROM ChatLieu where TrangThai=1";
+            sql = "SELECT*FROM MauSac where TrangThai=1";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            while (rs.next()) {                
-                 ChatLieu cl = new ChatLieu(rs.getString(1),
+            while (rs.next()) {
+                MauSac ms = new MauSac(rs.getString(1),
                         rs.getString(2), rs.getBoolean(3));
-                listChatLieu.add(cl);
+                listMauSac.add(ms);
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return listChatLieu;
+        return listMauSac;
     }
-    
-    public ChatLieu getOne(String ma){
-        ChatLieu cl = null;
+
+    public MauSac getOne(String ma) {
+        MauSac ms = null;
         try {
             conn = DBConnect.getConnection();
-            sql = "SELECT*FROM ChatLieu where MaChatLieu=?";
+            sql = "SELECT*FROM MauSac where MaMauSac=?";
             pst = conn.prepareStatement(sql);
             pst.setObject(1, ma);
             rs = pst.executeQuery();
-            while (rs.next()) {                
-                cl = new ChatLieu(rs.getString(1),
+            while (rs.next()) {
+                ms = new MauSac(rs.getString(1),
                         rs.getString(2), rs.getBoolean(3));
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return cl;
+        return ms;
     }
     
-    public int them(ChatLieu cl){
+    public int them(MauSac ms) {
         try {
             conn = DBConnect.getConnection();
-            sql = "INSERT INTO ChatLieu VALUES(?,?,?)";
+            sql = "INSERT INTO MauSac VALUES(?,?,?)";
             pst = conn.prepareStatement(sql);
-            pst.setObject(1, cl.getMaChatLieu());
-            pst.setObject(2, cl.getTenChatLieu());
-            pst.setObject(3, cl.isTrangThai());
-            return  pst.executeUpdate();
+            pst.setObject(1, ms.getMaMauSac());
+            pst.setObject(2, ms.getTenMauSac());
+            pst.setObject(3, ms.isTrangThai());
+            return pst.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
         }
     }
-    
-    public int sua(ChatLieu cl, String ma){
+
+
+    public int sua(MauSac ms, String ma) {
         try {
             conn = DBConnect.getConnection();
-            sql = "UPDATE ChatLieu set TenChatLieu=?,TrangThai=? where MaChatLieu=?";
+            sql = "UPDATE MauSac set TenMauSac=?,TrangThai=? where MaMauSac=?";
             pst = conn.prepareStatement(sql);
-            pst.setObject(1, cl.getTenChatLieu());
-            pst.setObject(2, cl.isTrangThai());
+            pst.setObject(1, ms.getTenMauSac());
+            pst.setObject(2, ms.isTrangThai());
             pst.setObject(3, ma);
-            return  pst.executeUpdate();
+            return pst.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
         }
     }
-    
-    public List<ChatLieu> getList(String name){
-        List<ChatLieu> listChatLieu4 = new ArrayList<>();
+
+    public List<MauSac> getList(String name) {
+        List<MauSac> listMauSac4 = new ArrayList<>();
         try {
             conn = DBConnect.getConnection();
-            sql = "SELECT*FROM ChatLieu where tenChatLieu like ?";
+            sql = "SELECT * FROM MauSac where tenMauSac like ?";
             pst = conn.prepareStatement(sql);
             pst.setObject(1, '%' + name + '%');
             rs = pst.executeQuery();
-            while (rs.next()) {                
-                ChatLieu cl = new ChatLieu(rs.getString(1),
+            while (rs.next()) {
+                MauSac ms = new MauSac(rs.getString(1),
                         rs.getString(2), rs.getBoolean(3));
-                listChatLieu4.add(cl);
+                listMauSac4.add(ms);
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return listChatLieu4;
+        return listMauSac4;
     }
-    
-    public List<ChatLieu> listPageCL(int index){
-        List<ChatLieu> listChatLieu3 = new ArrayList<>();
+
+    public List<MauSac> listPageMS(int index) {
+        List<MauSac> listMauSac3 = new ArrayList<>();
         try {
             conn = DBConnect.getConnection();
-            sql = "SELECT*FROM ChatLieu\n"
-                    + "order by MaChatLieu\n"
+            sql = "SELECT * FROM MauSac\n"
+                    + "order by MaMauSac\n"
                     + "OFFSET ? rows fetch next 5 rows only";
             pst = conn.prepareStatement(sql);
-            pst.setObject(1, (index - 1) * 5);
+            pst.setInt(1, (index - 1) * 5);
             rs = pst.executeQuery();
-            while (rs.next()) {                
-                 ChatLieu cl = new ChatLieu(rs.getString(1),
+            while (rs.next()) {
+                MauSac ms = new MauSac(rs.getString(1),
                         rs.getString(2), rs.getBoolean(3));
-                listChatLieu3.add(cl);
+                listMauSac3.add(ms);
             }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return listChatLieu3;
+        return listMauSac3;
     }
-    
-    public int tongBanGhi(){
+
+    public int tongBanGhi() {
         int tong = 0;
         try {
             conn = DBConnect.getConnection();
-            sql = "SELECT COUNT(*) FROM ChatLieu";
+            sql = "SELECT COUNT(*) FROM MauSac";
             pst = conn.prepareStatement(sql);
-            rs  = pst.executeQuery();
-            if(rs.next()){
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 tong = rs.getInt(1);
             }
         } catch (Exception e) {
@@ -148,16 +149,16 @@ public class ChatLieuRepository {
         }
         return tong;
     }
-    
-    public boolean checkTrungCL(String name1){
+
+    public boolean checkTrungMS(String name1) {
         try {
-            conn = DBConnect.getConnection();
-            sql = "SELECT CL.MaChatLieu FROM ChatLieu CL\n"
-                    + "where CL.TenChatLieu =?";
+            Connection conn = DBConnect.getConnection();
+            String sql = "SELECT MS.MaMauSac FROM MauSac MS\n"
+                    + "where MS.TenMauSac=?\n";
             pst = conn.prepareStatement(sql);
             pst.setObject(1, name1);
             rs = pst.executeQuery();
-            while (rs.next()) {                
+            while (rs.next()) {
                 return true;
             }
         } catch (SQLException e) {
