@@ -10,12 +10,5 @@ import java.util.List;
  *
  * @author ADMIN
  */
-public interface OnePieceFashtion<K,E> {
-    public List<K> getAll();
-    public int them(K k);
-    public int sua(K k,E e);
-    public int xoa(E e);
-    public K getOne(E e);
-    public List<K> getList(E e);
-    
+
 }
