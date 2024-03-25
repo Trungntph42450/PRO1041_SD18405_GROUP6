@@ -2,33 +2,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package service.servicelmp;
+package service.servicImp;
 
 import java.util.List;
-import model.KichThuoc;
-import repository.KichThuocRepository;
+import model.ChatLieu;
+import repository.ChatLieuRepository;
 import service.OnePieceFashtion;
 
 /**
  *
  * @author ADMIN
  */
-public class KichThuocServicelmp implements OnePieceFashtion<KichThuoc, String> {
-
-    KichThuocRepository repo = new KichThuocRepository();
+public class ChatLieulmp implements OnePieceFashtion<ChatLieu, String>{
+        
+    ChatLieuRepository repo = new ChatLieuRepository();
 
     @Override
-    public List<KichThuoc> getAll() {
+    public List<ChatLieu> getAll() {
         return repo.getAll();
     }
 
     @Override
-    public int them(KichThuoc k) {
+    public int them(ChatLieu k) {
         return repo.them(k);
     }
 
     @Override
-    public int sua(KichThuoc k, String e) {
+    public int sua(ChatLieu k, String e) {
         return repo.sua(k, e);
     }
 
@@ -38,25 +38,23 @@ public class KichThuocServicelmp implements OnePieceFashtion<KichThuoc, String> 
     }
 
     @Override
-    public KichThuoc getOne(String e) {
+    public ChatLieu getOne(String e) {
         return repo.getOne(e);
     }
 
     @Override
-    public List<KichThuoc> getList(String e) {
+    public List<ChatLieu> getList(String e) {
         return repo.getList(e);
     }
-
-    public List<KichThuoc> listPageKT(int index) {
-        return repo.listPageKT(index);
+     public List<ChatLieu> listPageCL(int index){
+        return repo.listPageCL(index);
     }
-
-    public int tongBanGhi() {
+    public int tongBanGhi(){
         return repo.tongBanGhi();
     }
-
-    public boolean checkTrungKT(String name1) {
-        return repo.checkTrungKT(name1);
+    
+    public boolean checkTrungCL(String name1) {
+        return repo.checkTrungCL(name1);
     }
-
+    
 }
