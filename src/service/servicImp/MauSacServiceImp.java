@@ -13,7 +13,7 @@ import service.OnePieceFashtion;
  *
  * @author ADMIN
  */
-public class MauSacServicelmp implements OnePieceFashtion<MauSac, String>{
+public class MauSacServiceImp implements OnePieceFashtion<MauSac, String>{
     
     MauSacRepository repo = new MauSacRepository();
     
