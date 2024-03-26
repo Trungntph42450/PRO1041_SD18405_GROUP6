@@ -3,12 +3,41 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/service/servicImp/ThongKeKhacServiceImp.java</file>
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/repository/ThongKeSoLuongRepository.java</file>
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/service/servicImp/ThongKeDoanhThuServiceImp.java</file>
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/service/servicImp/ThongKeSoLuongServiceImp.java</file>
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/repository/ThongKeKhacRepository.java</file>
+            <file>file:/D:/Da1_SD18405/PRO1041_SD18405_GROUP6/src/service/servicImp/KhuyenMaiServiceImp.java</file>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 95a60f8ff31bfdf89d97cf36238e068fddad2383
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/ChiTietSanPhamServiceImp.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/TaiKhoanServiceImp.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/repository/SanPhamRepository.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/SanPhamServiceImp.java</file>
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/KhachHangServiceImp.java</file>
+<<<<<<< HEAD
+=======
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/ThuocTinhView.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/NhanVienView.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/MauSacServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhachHangServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/GetUserName.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/NhanVienServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/model/TaiKhoan.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhuyenMaiServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/TaiKhoanServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene2.java</file>
+>>>>>>> 99a48c02d663ad95d1511f56d809d52f5337283c
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
+=======
             <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/service/servicImp/NhanVienServiceImp.java</file>
+>>>>>>> 95a60f8ff31bfdf89d97cf36238e068fddad2383
         </group>
     </open-files>
 </project-private>

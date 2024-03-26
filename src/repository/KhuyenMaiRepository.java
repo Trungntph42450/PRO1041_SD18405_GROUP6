@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -314,4 +318,8 @@ public class KhuyenMaiRepository {
         }
         return ev;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
