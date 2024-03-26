@@ -11,16 +11,18 @@ import service.OnePieceFashtion;
 
 /**
  *
- * @author lavuo
+ * @author an
  */
-public class KhuyenMaiServiceImp implements OnePieceFashtion<Events, String> {
-
-    KhuyenMaiRepository repo = new KhuyenMaiRepository();
+public class KhuyenMaiServiceImp implements OnePieceFashtion<Events, String>{
+     KhuyenMaiRepository repo = new KhuyenMaiRepository();
 
     @Override
     public List<Events> getAll() {
         return repo.getAll();
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
     }
 
     @Override
@@ -63,20 +65,19 @@ public class KhuyenMaiServiceImp implements OnePieceFashtion<Events, String> {
     public int tongBanGhi() {
         return repo.tongBanGhi();
     }
-
     public Events getActive(Double so) {
         return repo.getActive(so);
     }
-
     public Events getActive2(Double so) {
         return repo.getActive2(so);
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
     }
-
     public List<Events> getActive3(Double so) {
         return repo.getActive3(so);
     }
-
     public Events searchTen(String ten) {
         return repo.searchTen(ten);
     }

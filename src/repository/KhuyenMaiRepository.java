@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package repository;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import model.Events;
@@ -13,10 +18,10 @@ import util.DBConnect;
 
 /**
  *
- * @author lavuo
+ * @author an
  */
 public class KhuyenMaiRepository {
-
+    
     PreparedStatement ps = null;
     Connection con = null;
     ResultSet rs = null;
@@ -35,7 +40,6 @@ public class KhuyenMaiRepository {
                         rs.getDate(5), rs.getDate(6), rs.getString(7), rs.getBoolean(8),
                         rs.getBoolean(9), rs.getString(10));
                 listKm.add(ev);
-
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,7 +98,7 @@ public class KhuyenMaiRepository {
             sql = "update Events set MaEV = ? , TenEV = ? , HinhThuc=?, MucGiamGia=?, ThoiGianBatDau=?,\n"
                     + "ThoiGianKetThuc=?,MoTa=?,TrangThai=?,DieuKienApDung=?,DieuKienTongTien=? where MaEV=?";
             ps = con.prepareStatement(sql);
-           ps.setObject(1, ev.getMaEventa());
+            ps.setObject(1, ev.getMaEventa());
             ps.setObject(2, ev.getTenEvent());
             ps.setObject(3, ev.isHinhThuc());
             ps.setObject(4, ev.getMucGiamGia());
@@ -253,6 +257,7 @@ public class KhuyenMaiRepository {
                 Double giam = Double.valueOf(ev.getMucGiamGia()) / 100;
                 luongGia *= (1 - giam);
             }
+
             if (list.isEmpty()) {
                 return null;
             }
@@ -313,4 +318,8 @@ public class KhuyenMaiRepository {
         }
         return ev;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f0403480112930d4ccfd00af4ad6695cceeab2e2
