@@ -12,15 +12,13 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.ChiTietSanPham;
 import model.HoaDon;
-import model.NhanVien;
 import service.servicImp.ChiTietSanPhamServiceImp;
 import service.servicImp.HoaDonServiceImp;
-import static view.SanPhamView.maSanPham;
-import static view.SanPhamView.tenSanPham;
+
 
 /**
  *
- * @author Admin
+ * @author Nguyen Thanh Trung
  */
 public class HoaDonView extends javax.swing.JPanel {
 
@@ -136,21 +134,6 @@ public class HoaDonView extends javax.swing.JPanel {
     public void setMaDH(String maDH) {
         HoaDonView.maDH = maDH;
     }
-
-//    public String maTangTuDong(String tenMa) {
-////        int so = serviceDH.countDoiHang();
-//        so++;
-//        String maTuDong = "";
-//        String chuHoa = "QWERTYUIOPASDFGHJKLZXCVBNM";
-//        char[] kyTu = new char[2];
-//        for (int i = 0; i < 2; i++) {
-//            kyTu[i] = chuHoa.charAt(random.nextInt(chuHoa.length()));
-//            maTuDong += kyTu[i];
-//        }
-//        String maHD = tenMa + String.format("%04d", so) + maTuDong;
-//        return maHD;
-//    }
-
 
 
     /**
@@ -352,7 +335,7 @@ public class HoaDonView extends javax.swing.JPanel {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông tin sản phẩm"));
 
         tblLoaiSanPham.setModel(new javax.swing.table.DefaultTableModel(
