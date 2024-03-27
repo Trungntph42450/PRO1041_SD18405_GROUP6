@@ -4,10 +4,15 @@
  */
 package application;
 
+import view.DangNhapView;
+
 /**
  *
  * @author Nguyen Thanh Trung
  */
 public class Main {
-    
+
+    public static void main(String[] args) {
+        new DangNhapView().setVisible(true);
+    }
 }

@@ -204,6 +204,7 @@ public class KhachHangView extends javax.swing.JPanel {
         btnThem = new javax.swing.JButton();
         btnCapNhat = new javax.swing.JButton();
         btnLamMoi = new javax.swing.JButton();
+        txtNgaySinh = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblKhachHang = new javax.swing.JTable();
@@ -306,7 +307,7 @@ public class KhachHangView extends javax.swing.JPanel {
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtSoDienThoai, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -324,7 +325,9 @@ public class KhachHangView extends javax.swing.JPanel {
                                 .addGap(108, 108, 108)
                                 .addComponent(jLabel5)))
                         .addGap(18, 18, 18)
-                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
+                            .addComponent(txtNgaySinh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(46, 46, 46)))
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
@@ -348,11 +351,12 @@ public class KhachHangView extends javax.swing.JPanel {
                                         .addComponent(jLabel3)
                                         .addComponent(rdNam)
                                         .addComponent(rdNu))
-                                    .addComponent(jLabel5)))
+                                    .addComponent(jLabel5)
+                                    .addComponent(txtNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
                                 .addComponent(jLabel7)))
-                        .addGap(18, 18, 18)
+                        .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(txtTenKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -756,6 +760,7 @@ public class KhachHangView extends javax.swing.JPanel {
     private javax.swing.JTextArea txtDiaChi;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtMaKhachHang;
+    private com.toedter.calendar.JDateChooser txtNgaySinh;
     private javax.swing.JTextField txtSoDienThoai;
     private javax.swing.JTextField txtTenKhachHang;
     private javax.swing.JTextField txtTimKiem;
