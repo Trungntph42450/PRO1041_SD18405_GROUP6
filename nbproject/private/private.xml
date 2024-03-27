@@ -5,15 +5,9 @@
         <group>
             <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/ThuocTinhView.java</file>
             <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/NhanVienView.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/MauSacServiceImp.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhachHangServiceImp.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/GetUserName.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/NhanVienServiceImp.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/model/TaiKhoan.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/KhuyenMaiServiceImp.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/TaiKhoanServiceImp.java</file>
-            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/util/PDFGene2.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/service/servicImp/HoaDonChiTietServiceImp.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/view/HoaDonView.java</file>
+            <file>file:/C:/Users/ADMIN/Pictures/PRO1041_SD18405_GROUP6/src/repository/HoaDonChiTietRepository.java</file>
         </group>
     </open-files>
 </project-private>
