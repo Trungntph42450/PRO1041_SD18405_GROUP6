@@ -8,13 +8,13 @@ import com.sun.jdi.connect.spi.Connection;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-//import util.DBConnect;
-//import java.sql.*;
-//import javax.swing.JLabel;
-//import model.NhanVien;
-//import repository.DangNhapRepository;
-//import service.OnePieceFashtion;
-//import service.servicImp.NhanVienServiceImp;
+import util.DBConnect;
+import java.sql.*;
+import javax.swing.JLabel;
+import model.NhanVien;
+import repository.DangNhapRepository;
+import service.OnePieceFashtion;
+import service.servicImp.NhanVienServiceImp;
 
 /**
  *
@@ -22,37 +22,37 @@ import javax.swing.JOptionPane;
  */
 public class DangNhapView extends javax.swing.JFrame {
 
-//    private DangNhapRepository repository = new DangNhapRepository();
-//    private OnePieceFashtion ops = new OnePieceFashtion();
-//    private NhanVienServiceImp serviceImp = new NhanVienServiceImp();
-//    private NhanVien nhanVien;
-//    private static String tenNV;
-//    private static String maNV;
-//    private static String taiKhoan;
+    private DangNhapRepository repository = new DangNhapRepository();
+    private OnePieceFashtionView ops = new OnePieceFashtionView();
+    private NhanVienServiceImp serviceImp = new NhanVienServiceImp();
+    private NhanVien nhanVien;
+    private static String tenNV;
+    private static String maNV;
+    private static String taiKhoan;
 
-//    public String getMaNV() {
-//        return maNV;
-//    }
-//
-//    public void setMaNV(String maNV) {
-//        DangNhapView.maNV = maNV;
-//    }
-//
-//    public String getTenNV() {
-//        return tenNV;
-//    }
-//
-//    public void setTenNV(String tenNV) {
-//        this.tenNV = tenNV;
-//    }
-//
-//    public static String getTaiKhoan() {
-//        return taiKhoan;
-//    }
-//
-//    public void setTaiKhoan(String taiKhoan) {
-//        this.taiKhoan = taiKhoan;
-//    }
+    public String getMaNV() {
+        return maNV;
+    }
+
+    public void setMaNV(String maNV) {
+        DangNhapView.maNV = maNV;
+    }
+
+    public String getTenNV() {
+        return tenNV;
+    }
+
+    public void setTenNV(String tenNV) {
+        this.tenNV = tenNV;
+    }
+
+    public static String getTaiKhoan() {
+        return taiKhoan;
+    }
+
+    public void setTaiKhoan(String taiKhoan) {
+        this.taiKhoan = taiKhoan;
+    }
 
     /**
      * Creates new form DangNhapView
@@ -64,24 +64,24 @@ public class DangNhapView extends javax.swing.JFrame {
         setSize(848, 458);
         this.setLocationRelativeTo(null);
     }
-//
-//    public boolean checkEmpty() {
-//        if (txtTaiKhoan.getText().trim().isEmpty()) {
-//            JOptionPane.showMessageDialog(this, "Username không được để trống");
-//            txtTaiKhoan.requestFocus();
-//            return false;
-//        }
-//        if (txtMatKhau.getText().trim().isEmpty()) {
-//            JOptionPane.showMessageDialog(this, "Password không được để trống");
-//            txtMatKhau.requestFocus();
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    public String getUsername() {
-//        return txtTaiKhoan.getText();
-//    }
+
+    public boolean checkEmpty() {
+        if (txtTaiKhoan.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Username không được để trống");
+            txtTaiKhoan.requestFocus();
+            return false;
+        }
+        if (txtMatKhau.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Password không được để trống");
+            txtMatKhau.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
+    public String getUsername() {
+        return txtTaiKhoan.getText();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -277,24 +277,24 @@ public class DangNhapView extends javax.swing.JFrame {
 //    Connection con;
     private void btnDangNhapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDangNhapMouseClicked
         // TODO add your handling code here:
-//        if (checkEmpty()) {
-//            String userName = txtTaiKhoan.getText();
-//            taiKhoan = userName;
-//            String passWord = String.valueOf(txtMatKhau.getText());
-//            if (repository.checkNguoiDungTonTai(userName, passWord)) {
-//                tenNV = repository.getTenNhanVien(userName);
-//                maNV = repository.getMaNhanVien(userName);
-//                nhanVien = serviceImp.getOne(maNV);
-//                boolean isAdmin = repository.isAdmin(nhanVien.getTaiKhoan().getMaTaiKhoan());
-//                ops.setAdmin(isAdmin);
-//                ops.showView();
-//                ops.setTenNV(tenNV);
-//                this.setVisible(false);
-//                ops.setVisible(true);
-//            } else {
-//                JOptionPane.showMessageDialog(this, "UserName hoặc Password sai!");
-//            }
-//        }
+        if (checkEmpty()) {
+            String userName = txtTaiKhoan.getText();
+            taiKhoan = userName;
+            String passWord = String.valueOf(txtMatKhau.getText());
+            if (repository.checkNguoiDungTonTai(userName, passWord)) {
+                tenNV = repository.getTenNhanVien(userName);
+                maNV = repository.getMaNhanVien(userName);
+                nhanVien = serviceImp.getOne(maNV);
+                boolean isAdmin = repository.isAdmin(nhanVien.getTaiKhoan().getMaTaiKhoan());
+                ops.setAdmin(isAdmin);
+                ops.showView();
+                ops.setTenNV(tenNV);
+                this.setVisible(false);
+                ops.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "UserName hoặc Password sai!");
+            }
+        }
 
     }//GEN-LAST:event_btnDangNhapMouseClicked
 
@@ -312,11 +312,11 @@ public class DangNhapView extends javax.swing.JFrame {
 
     private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
         // TODO add your handling code here:
-        txtMatKhau.setEchoChar((char) 0);
-        disable.setVisible(false);
-        disable.setEnabled(false);
-        show.setEnabled(true);
-        show.setEnabled(true);
+//        txtMatKhau.setEchoChar((char) 0);
+//        disable.setVisible(false);
+//        disable.setEnabled(false);
+//        show.setEnabled(true);
+//        show.setEnabled(true);
     }//GEN-LAST:event_btnThoatActionPerformed
 
     private void showMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_showMouseClicked

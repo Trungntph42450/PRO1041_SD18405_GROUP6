@@ -24,7 +24,7 @@ import service.servicImp.KhachHangServiceImp;
 
 /**
  *
- * @author Admin
+ * @author Nguyen Thanh Trung
  */
 public class KhachHangView extends javax.swing.JPanel {
 
