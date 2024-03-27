@@ -174,14 +174,10 @@ INSERT INTO HoaDon VALUES
 ('HD23','NV04','KH10','2023-12-23',750000,50000,700000,N'Đã thanh toán',N'Thành công','EV03')
 
 
-
-
- select * from ChiTietSanPham
-  select * from DoiHangChiTiet
 --đoạn code dưới để check HDCT nhé nào cảm thấy thiếu thì check có thể not in or in
 
 --delete from HoaDonChiTiet
-
+--EXECUTE 6 LẦN ĐỂ RA DỮ LIỆU HOADONCHITIET
 DECLARE @Counter INT = 1;
 
 WHILE @Counter <= 23
@@ -202,7 +198,7 @@ BEGIN
 
     SET @Counter = @Counter + 1;
 END
-
+-------------------------------
 UPDATE HoaDon
 SET TongTien = (
     SELECT SUM(HDCT.SoLuong * HDCT.DonGia) AS TongTien
@@ -217,18 +213,7 @@ SELECT * FROM ChiTietSanPham where MaCTSP  not in(SELECT MaCTSP FROM HoaDonChiTi
 SELECT MaHoaDon, COUNT(MaCTSP) FROM HoaDonChiTiet
 GROUP BY MaHoaDon
 HAVING COUNT(MaCTSP)=0
-INSERT INTO DoiHang VALUES
-('DH01','NV02','HD03','2023-11-07',N'Đổi thành công'),
-('DH02','NV04','HD06','2023-11-14',N'Đổi thành công'),
-('DH03','NV05','HD08','2023-11-19',N'Đổi thành công'),
-('DH04','NV03','HD10','2023-11-29',N'Đổi thành công')
 
-INSERT INTO DoiHangChiTiet VALUES
-('DHCT01','CTSP0650DF','DH03','HD01_127',2,N'Áo bị chật',1),
-('DHCT02','CTSP07E84A','DH01','HD01_148',1,N'Áo bị rộng',1),
-('DHCT03','CTSP0CB037','DH02','HD01_157',1,N'Áo bị chật',1),
-('DHCT04','CTSP10DAA4','DH03','HD01_169',1,N'Áo bị chật',1),
-('DHCT05','CTSP1204BD','DH04','HD01_214',1,N'Áo bị rộng',1)
 
 SELECT * FROM [TaiKhoan]
 SELECT * FROM [NhanVien]
@@ -242,8 +227,7 @@ SELECT * FROM [ChatLieu]
 SELECT * FROM [KichThuoc]
 SELECT * FROM [ChiTietSanPham]
 SELECT * FROM [HoaDonChiTiet]
-SELECT * FROM [DoiHang]
-SELECT * FROM [DoiHangChiTiet]
+
 
 
 
