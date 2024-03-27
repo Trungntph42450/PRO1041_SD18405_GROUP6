@@ -157,21 +157,7 @@ public class OnePieceFashtion extends javax.swing.JFrame {
             }
         });
 
-        //Lịch sử đổi trả
-        MenuItem menuLsuDoiHang = new MenuItem(iconLichSuDoiHang, "Lịch sử đổi hàng", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                changePanelBody(new LichSuDoiHangView());
-            }
-        });
 
-        //Đổi trả
-        MenuItem menuDoiHang = new MenuItem(iconDoiHang, "Đổi hàng", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                changePanelBody(new DoiHangView());
-            }
-        });
 
         //Khuyến mại
         MenuItem menuKm = new MenuItem(iconKhuyenMai, "Khuyến mại", new ActionListener() {
@@ -206,9 +192,9 @@ public class OnePieceFashtion extends javax.swing.JFrame {
 
         //Câu lệnh thêm vào menu
         if (isAdmin) {
-            addMenu(menuThongKe, menuMatHang, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuLsuDoiHang, menuKm, menuDoiMatKhau, menuDangXuat);
+            addMenu(menuThongKe, menuMatHang, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuDoiMatKhau, menuDangXuat);
         } else {
-            addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuLsuDoiHang, menuDoiMatKhau, menuDangXuat);
+            addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuDoiMatKhau, menuDangXuat);
         }
         MenuItemColor(menuThongKe);
         MenuItemColor(menuMatHang);
@@ -219,8 +205,6 @@ public class OnePieceFashtion extends javax.swing.JFrame {
         MenuItemColor(menuKhachHang);
         MenuItemColor(menuHoaDon);
         MenuItemColor(menuKm);
-        MenuItemColor(menuDoiHang);
-        MenuItemColor(menuLsuDoiHang);
         MenuItemColor(menuThongKeDT);
         MenuItemColor(menuThongKeSL);
         MenuItemColor(menuThongKe3);

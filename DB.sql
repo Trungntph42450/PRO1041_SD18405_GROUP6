@@ -139,27 +139,3 @@ CREATE TABLE [HoaDonChiTiet] (
   PRIMARY KEY ([MaHoaDonChiTiet])
 );
 
-CREATE TABLE [DoiHang] (
-  [MaDoiHang] varchar(10),
-  [MaNV] varchar(10) not null,
-   CONSTRAINT FK_DH_NV foreign key(MaNV) references NhanVien(MaNV),
-   [MaHoaDon] varchar(10) not null,
-   CONSTRAINT FK_DH_HD foreign key(MaHoaDon) references HoaDon(MaHoaDon),
-  [NgayDoiTra] date,
-  [TrangThai] nvarchar(30),
-  PRIMARY KEY ([MaDoiHang])
-);
-
-CREATE TABLE [DoiHangChiTiet] (
-  [MaDHCT] varchar(10),
-  [MaCTSP] varchar(10) ,
-   CONSTRAINT FK_DHCT_SPCT foreign key(MaCTSP) references ChiTietSanPham(MaCTSP),
-  [MaDoiHang] varchar(10) not null,
-   CONSTRAINT FK_DHCT_DH foreign key(MaDoiHang) references DoiHang(MaDoiHang),
-   [MaHoaDonChiTiet] varchar(20) not null,
-   CONSTRAINT FK_DHCT_HDCT foreign key(MaHoaDonChiTiet) references HoaDonChiTiet(MaHoaDonChiTiet),
-   [SoLuong] int,
-  [MoTa] nvarchar(MAX),
-  [TrangThai] bit,
-  PRIMARY KEY ([MaDHCT])
-);
