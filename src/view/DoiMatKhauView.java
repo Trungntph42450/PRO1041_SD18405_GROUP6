@@ -10,7 +10,7 @@ import service.servicImp.TaiKhoanServiceImp;
 
 /**
  *
- * @author Admin
+ * @author Nguyen Thanh Trung
  */
 public class DoiMatKhauView extends javax.swing.JPanel {
 
@@ -26,17 +26,17 @@ public class DoiMatKhauView extends javax.swing.JPanel {
 
     public boolean checkEmpty() {
         if (txtMatKhauHT.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu hiện tại không được để trống");
+            JOptionPane.showMessageDialog(this, "Vui lòng không để trống mật khẩu hiện tại");
             txtMatKhauHT.requestFocus();
             return false;
         }
         if (txtMatKhauM.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu mới không được để trống");
+            JOptionPane.showMessageDialog(this, "Vui lòng không để trống mật khẩu mới");
             txtMatKhauM.requestFocus();
             return false;
         }
         if (txtMatKhauM2.getText().trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Nhập lại mật khẩu mới không được để trống");
+            JOptionPane.showMessageDialog(this, "Vui lòng không để trống nhập lại mật khẩu");
             txtMatKhauM2.requestFocus();
             return false;
         }
@@ -45,24 +45,24 @@ public class DoiMatKhauView extends javax.swing.JPanel {
 
     public boolean checkHopLe(String maTK, String mkHienTai, String matKhauMoi, String matKhauMoi2) {
         if (matKhauMoi.length() < 8) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu mới phải có ít nhất 8 ký tự");
+            JOptionPane.showMessageDialog(this, "Mật khẩu mới tối thiểu là  8 ký tự");
             return false;
         }
         if (matKhauMoi.length() > 20) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu mới không được quá 20 ký tự");
+            JOptionPane.showMessageDialog(this, "Mật khẩu mới tối đa là 20 ký tự");
             return false;
         }
         if (!serviceDMK.checkMaTK(maTK)) {
-            JOptionPane.showMessageDialog(this, "Không tồn tại mã tài khoản vừa nhập");
+            JOptionPane.showMessageDialog(this, "Mã tài khoản không tồn tại");
             return false;
         }
         if (!serviceDMK.checkPassword(maTK, mkHienTai)) {
-            JOptionPane.showMessageDialog(this, "Mật khẩu hiện tại không đúng");
+            JOptionPane.showMessageDialog(this, "Mật khẩu hiện tại không chính xác");
             return false;
         }
 
         if (!matKhauMoi.equals(matKhauMoi2)) {
-            JOptionPane.showMessageDialog(this, "Xác nhận mật khẩu mới không khớp");
+            JOptionPane.showMessageDialog(this, "Mật khẩu mới vừa nhập không khớp");
             return false;
         }
         return true;
@@ -93,7 +93,7 @@ public class DoiMatKhauView extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 26)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("ĐỔI MẬT KHẨU");
+        jLabel1.setText("THAY ĐỔI MẬT KHẨU");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Nhập lại mật khẩu mới");

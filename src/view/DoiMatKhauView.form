@@ -89,7 +89,7 @@
           <Font name="Segoe UI Black" size="26" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="&#x110;&#x1ed4;I M&#x1eac;T KH&#x1ea8;U"/>
+        <Property name="text" type="java.lang.String" value="THAY &#x110;&#x1ed4;I M&#x1eac;T KH&#x1ea8;U"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
