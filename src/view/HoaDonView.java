@@ -12,15 +12,13 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.ChiTietSanPham;
 import model.HoaDon;
-import model.NhanVien;
 import service.servicImp.ChiTietSanPhamServiceImp;
 import service.servicImp.HoaDonServiceImp;
-import static view.SanPhamView.maSanPham;
-import static view.SanPhamView.tenSanPham;
+
 
 /**
  *
- * @author Admin
+ * @author Nguyen Thanh Trung
  */
 public class HoaDonView extends javax.swing.JPanel {
 
@@ -58,6 +56,18 @@ public class HoaDonView extends javax.swing.JPanel {
     }
 
     public void fillTableSanPhamHDChiTiet(List<ChiTietSanPham> list, String maHoadon) {
+        tblmSanPhamHDChiTiet = (DefaultTableModel) tblLoaiSanPham.getModel();
+        tblmSanPhamHDChiTiet.setRowCount(0);
+        for (ChiTietSanPham ctsp : list) {
+            tblmSanPhamHDChiTiet.addRow(new Object[]{tblmSanPhamHDChiTiet.getRowCount() + 1,
+                ctsp.getMaChiTietSanPham(), ctsp.getSanPham().getMaSanPham(),
+                ctsp.getSanPham().getTenSanPham(),
+                maHoadon, ctsp.getSoLuong(), ctsp.getGia(), ctsp.isTrangThai() ? "Thành công" : "Thất bại"
+            });
+        }
+    }
+    
+    public void fillTableSanPhamHDChiTiet2(List<ChiTietSanPham> list, String maHoadon) {
         tblmSanPhamHDChiTiet = (DefaultTableModel) tblLoaiSanPham.getModel();
         tblmSanPhamHDChiTiet.setRowCount(0);
         for (ChiTietSanPham ctsp : list) {
@@ -136,21 +146,6 @@ public class HoaDonView extends javax.swing.JPanel {
     public void setMaDH(String maDH) {
         HoaDonView.maDH = maDH;
     }
-
-//    public String maTangTuDong(String tenMa) {
-////        int so = serviceDH.countDoiHang();
-//        so++;
-//        String maTuDong = "";
-//        String chuHoa = "QWERTYUIOPASDFGHJKLZXCVBNM";
-//        char[] kyTu = new char[2];
-//        for (int i = 0; i < 2; i++) {
-//            kyTu[i] = chuHoa.charAt(random.nextInt(chuHoa.length()));
-//            maTuDong += kyTu[i];
-//        }
-//        String maHD = tenMa + String.format("%04d", so) + maTuDong;
-//        return maHD;
-//    }
-
 
 
     /**
