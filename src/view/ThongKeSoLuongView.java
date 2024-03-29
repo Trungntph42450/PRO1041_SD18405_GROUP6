@@ -275,7 +275,7 @@ public class ThongKeSoLuongView extends javax.swing.JPanel {
         panelTopSP = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

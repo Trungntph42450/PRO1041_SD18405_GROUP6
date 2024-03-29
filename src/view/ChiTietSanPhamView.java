@@ -664,7 +664,7 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(471, 471, 471)
+                        .addGap(462, 462, 462)
                         .addComponent(btnLui2)
                         .addGap(38, 38, 38)
                         .addComponent(lbSoTrang2)
