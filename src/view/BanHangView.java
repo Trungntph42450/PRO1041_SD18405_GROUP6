@@ -4,9 +4,7 @@
  */
 package view;
 
-import com.github.sarxos.webcam.Webcam;
-import com.github.sarxos.webcam.WebcamPanel;
-import com.github.sarxos.webcam.WebcamResolution;
+
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.MultiFormatReader;
@@ -99,8 +97,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
     Random rd = new Random();
     DangNhapView dangNhapView = new DangNhapView();
     String userName = dangNhapView.getTaiKhoan();
-    private WebcamPanel panel = null;
-    private Webcam webcam = null;
+
     private Executor executor = Executors.newSingleThreadExecutor(this);
 
     /**
@@ -121,24 +118,10 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         loadLocChatLieu(serviceCl.getAll());
         loadLocMauSac(serviceMS.getAll());
         loadLocKichThuoc(serviceKT.getAll());
-        initWebcam();
+        
     }
 
-    private void initWebcam() {
-        Dimension size = WebcamResolution.QVGA.getSize();
-        webcam = Webcam.getWebcams().get(0);
-        if (webcam.isOpen()) {
-            webcam.close();
-        }
-        webcam.setViewSize(size);
-        panel = new WebcamPanel(webcam);
-        panel.setPreferredSize(size);
-        panel.setFPSDisplayed(true);
 
-        pnlWebCam.setLayout(new BorderLayout());
-        pnlWebCam.add(panel, 0);
-        executor.execute(this);
-    }
 
     @Override
     public void run() {
@@ -150,21 +133,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
             }
 
             Result result = null;
-            BufferedImage image = null;
 
-            if (webcam.isOpen()) {
-                if ((image = webcam.getImage()) == null) {
-                    continue;
-                }
-            }
-
-            try {
-                LuminanceSource source = new BufferedImageLuminanceSource(image);
-                BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
-                result = new MultiFormatReader().decode(bitmap);
-            } catch (Exception e) {
-
-            }
 
             if (result != null) {
                 indexHoaDonCho = tblHoaDonCho.getSelectedRow();
