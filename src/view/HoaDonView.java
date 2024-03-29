@@ -67,6 +67,18 @@ public class HoaDonView extends javax.swing.JPanel {
         }
     }
     
+    public void fillTableSanPhamHDChiTiet2(List<ChiTietSanPham> list, String maHoadon) {
+        tblmSanPhamHDChiTiet = (DefaultTableModel) tblLoaiSanPham.getModel();
+        tblmSanPhamHDChiTiet.setRowCount(0);
+        for (ChiTietSanPham ctsp : list) {
+            tblmSanPhamHDChiTiet.addRow(new Object[]{tblmSanPhamHDChiTiet.getRowCount() + 1,
+                ctsp.getMaChiTietSanPham(), ctsp.getSanPham().getMaSanPham(),
+                ctsp.getSanPham().getTenSanPham(),
+                maHoadon, ctsp.getSoLuong(), ctsp.getGia(), ctsp.isTrangThai() ? "Thành công" : "Thất bại"
+            });
+        }
+    }
+    
     public String phanCach(Double x) {
         NumberFormat fm = NumberFormat.getNumberInstance(Locale.US);
         return fm.format(x);
