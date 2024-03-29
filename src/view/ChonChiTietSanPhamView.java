@@ -342,9 +342,8 @@ public class ChonChiTietSanPhamView extends javax.swing.JPanel {
             }
         });
 
-        btnReset.setBackground(new java.awt.Color(0, 153, 102));
         btnReset.setForeground(new java.awt.Color(255, 255, 255));
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
         btnReset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnResetMouseClicked(evt);
@@ -380,9 +379,8 @@ public class ChonChiTietSanPhamView extends javax.swing.JPanel {
                 .addComponent(cboLocKich, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addComponent(cboLocChat, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(btnReset))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -394,9 +392,9 @@ public class ChonChiTietSanPhamView extends javax.swing.JPanel {
                         .addComponent(cboLocChat, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE))
                     .addComponent(cboLocMau, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnReset))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Lý do đổi hàng"));
@@ -516,7 +514,7 @@ public class ChonChiTietSanPhamView extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(370, 370, 370)
+                        .addGap(427, 427, 427)
                         .addComponent(btnLui)
                         .addGap(58, 58, 58)
                         .addComponent(lbSoTrang)

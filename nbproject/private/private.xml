@@ -3,6 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/HoaDonView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/BanHangView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/MenuItem.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ThongKeKhacView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/NhanVienView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ThongKeDoanhThuView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ThongKeSoLuongView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/KhachHangView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/KhuyenMaiView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/SanPhamView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ThuocTinhView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/DoiMatKhauView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/DangNhapView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/ChonChiTietSanPhamView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/SendEmailView.java</file>
+            <file>file:/C:/Users/user/Desktop/da1/PRO1041_SD18405_GROUP6/src/view/OnePieceFashtionView.java</file>
+=======
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/SendEmailView.java</file>
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/KhuyenMaiView.java</file>
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/KhachHangView.java</file>
@@ -16,6 +34,7 @@
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/BanHangView.java</file>
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/ChiTietSanPhamView.java</file>
             <file>file:/C:/Users/Nguyen%20Thanh%20Trung/Documents/PRO1041_SD18405_GROUP6/src/view/SanPhamView.java</file>
+>>>>>>> e2cc5b4be7ab83a6bf40cf3510e6fb0923c9559b
         </group>
     </open-files>
 </project-private>
