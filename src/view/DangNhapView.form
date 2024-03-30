@@ -177,6 +177,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtTaiKhoan">
           <Properties>
+            <Property name="text" type="java.lang.String" value="onePiece1"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder>
@@ -236,6 +237,7 @@
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtMatKhau">
           <Properties>
+            <Property name="text" type="java.lang.String" value="shopbanhang1"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
                 <CompoundBorder>
@@ -249,6 +251,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMatKhauActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
