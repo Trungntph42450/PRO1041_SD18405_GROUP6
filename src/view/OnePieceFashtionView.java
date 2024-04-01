@@ -21,9 +21,9 @@ import javax.swing.JPanel;
  */
 public class OnePieceFashtionView extends javax.swing.JFrame {
 
-    Color defaultColor = new Color(56, 106, 165);
-    Color selectedColor = new Color(204, 204, 204);
-    Color enterColor = new Color(228, 227, 227);
+ Color defaultColor = new Color(255,51,51);// mau do khi buton 
+    Color selectedColor = new Color(255,51,153);// mau khi buton onclick
+    Color enterColor = new Color(255,51,102);
     String tenNV;
     private boolean isAdmin;
 
@@ -272,7 +272,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelHeader.setBackground(new java.awt.Color(0, 51, 153));
+        panelHeader.setBackground(new java.awt.Color(255, 51, 51));
         panelHeader.setPreferredSize(new java.awt.Dimension(561, 50));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/close.png"))); // NOI18N
@@ -324,7 +324,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(null);
 
-        menus.setBackground(new java.awt.Color(0, 0, 153));
+        menus.setBackground(new java.awt.Color(255, 51, 51));
         menus.setLayout(new javax.swing.BoxLayout(menus, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(menus);
 

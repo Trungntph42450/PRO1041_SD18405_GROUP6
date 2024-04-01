@@ -649,8 +649,11 @@ public class SanPhamView extends javax.swing.JPanel {
         // TODO add your handling code here:
         SanPham sp = savesSP();
         if (validateSP()) {
-            if (serviceSP.getOne(sp.getMaSanPham()) != null) {
+          if (serviceSP.getOne(sp.getMaSanPham()) != null) {
                 JOptionPane.showMessageDialog(this, "Mã sản phẩm trùng");
+               return;
+            } else  if (txtMaSanPham.getText().trim().isEmpty() ||txtTenSanPham.getText().trim().isEmpty() ||  txtXuatXu.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "KHông được nhấp khoảng trống");
                 return;
             } else {
                 if (serviceSP.them(sp) > 0) {

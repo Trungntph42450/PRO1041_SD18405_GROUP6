@@ -35,8 +35,6 @@ import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import model.DoiHang;
-import model.DoiHangChiTiet;
 import model.HoaDonChiTiet;
 
 /**
