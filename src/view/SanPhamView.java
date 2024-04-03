@@ -649,10 +649,10 @@ public class SanPhamView extends javax.swing.JPanel {
         // TODO add your handling code here:
         SanPham sp = savesSP();
         if (validateSP()) {
-          if (serviceSP.getOne(sp.getMaSanPham()) != null) {
+            if (serviceSP.getOne(sp.getMaSanPham()) != null) {
                 JOptionPane.showMessageDialog(this, "Mã sản phẩm trùng");
-               return;
-            } else  if (txtMaSanPham.getText().trim().isEmpty() ||txtTenSanPham.getText().trim().isEmpty() ||  txtXuatXu.getText().trim().isEmpty()) {
+                return;
+            } else if (txtMaSanPham.getText().trim().isEmpty() || txtTenSanPham.getText().trim().isEmpty() || txtXuatXu.getText().trim().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "KHông được nhấp khoảng trống");
                 return;
             } else {
@@ -669,17 +669,22 @@ public class SanPhamView extends javax.swing.JPanel {
     private void btnSuaSPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaSPActionPerformed
         // TODO add your handling code here:
         index = tblSanPham.getSelectedRow();
-        if (index < 0) {
-            JOptionPane.showMessageDialog(this, "Bạn chưa chọn dòng dữ liệu nào");
-            return;
-        } else {
-            SanPham sp = savesSP();
-            String ma = tblSanPham.getValueAt(index, 0).toString();
-            if (serviceSP.sua(sp, ma) > 0) {
-                loadPageSP();
-                JOptionPane.showMessageDialog(this, "Sửa sản phẩm thành công");
+        if (validateSP()) {
+            if (index < 0) {
+                JOptionPane.showMessageDialog(this, "Bạn chưa chọn dòng dữ liệu nào");
+                return;
+            } else if (txtMaSanPham.getText().trim().isEmpty() || txtTenSanPham.getText().trim().isEmpty() || txtXuatXu.getText().trim().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "KHông được nhấp khoảng trống");
+                return;
             } else {
-                JOptionPane.showMessageDialog(this, "Sửa sản phẩm thất bại");
+                SanPham sp = savesSP();
+                String ma = tblSanPham.getValueAt(index, 0).toString();
+                if (serviceSP.sua(sp, ma) > 0) {
+                    loadPageSP();
+                    JOptionPane.showMessageDialog(this, "Sửa sản phẩm thành công");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Sửa sản phẩm thất bại");
+                }
             }
         }
     }//GEN-LAST:event_btnSuaSPActionPerformed

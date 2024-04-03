@@ -57,7 +57,7 @@ import service.servicImp.KhachHangServiceImp;
 import service.servicImp.KhuyenMaiServiceImp;
 import service.servicImp.NhanVienServiceImp;
 import util.PDFGene;
-//
+
 import java.awt.*;
 import java.util.Random;
 import javax.swing.*;
