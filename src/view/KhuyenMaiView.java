@@ -127,8 +127,14 @@ public class KhuyenMaiView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Chưa điền mã khuyến mãi");
             return false;
         }
-        if (txtTenKM.getText().isEmpty()) {
+        if (txtTenKM.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền tên khuyến mãi");
+            return false;
+        } else if (txtTenKM.getText().matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            JOptionPane.showMessageDialog(this, "khuyến mãi không được chứa kí tự đặc biệt");
+            return false;
+        } else if (txtTenKM.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Tên khuyến mãi không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtMucGiam.getText().isEmpty()) {

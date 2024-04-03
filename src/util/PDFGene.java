@@ -56,7 +56,7 @@ public class PDFGene {
         pdfDocument.setDefaultPageSize(PageSize.A4);
         Document document = new Document(pdfDocument);
 
-        String imgPath = "src\\img\\logo.png";
+        String imgPath = "D:\\PRO1041_DuAn1\\logo.jpg";
         ImageData imgData = ImageDataFactory.create(imgPath);
         Image img2 = new Image(imgData);
         img2.setFixedPosition(10, 710);
@@ -106,7 +106,7 @@ public class PDFGene {
         twoColTable.addCell(getBillingandCustomCell("Thông tin khách hàng").setHeight(25f));
         twoColTable.addCell(getCell10fLeft("Cửa hàng", true));
         twoColTable.addCell(getCell10fLeft("Họ tên", true));
-        twoColTable.addCell(getCell10fLeft("Adam Store", false));
+        twoColTable.addCell(getCell10fLeft("One Piece Fashtion", false));
         twoColTable.addCell(getCell10fLeft(hd.getKhachHang().getHoTen(), false));
         twoColTable.addCell(getCell10fLeft("Nhân viên", true));
         twoColTable.addCell(getCell10fLeft("Số điện thoại", true));
@@ -116,9 +116,9 @@ public class PDFGene {
 
         Table oneColTable = new Table(onecolumnWidth);
         oneColTable.addCell(getCell10fLeft("Địa chỉ", true));
-        oneColTable.addCell(getCell10fLeft("Số 10 Láng Hạ, Quận Đống Đa, Thành phố Hà Nội", false));
+        oneColTable.addCell(getCell10fLeft("Số 88 Cầu Diễn , Phường Phúc Diễn , Quận Bắc Từ Liêm , Hà Nội", false));
         oneColTable.addCell(getCell10fLeft("Email", true));
-        oneColTable.addCell(getCell10fLeft("AdamStores5ACE@gmail.com", false));
+        oneColTable.addCell(getCell10fLeft("OnePieceFashtion@gmail.com", false));
         document.add(oneColTable.setMarginBottom(10f));
 
         Table tableDevider = new Table(fullwidth);
