@@ -47,9 +47,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import repository.ThongKeDoanhThuRepository;
 import repository.ThongKeSoLuongRepository;
 import service.servicImp.ThongKeDoanhThuServiceImp;
-import static util.PDFGene2.getBillingandCustomCell;
-import static util.PDFGene2.getHeaderTextCell;
-import static util.PDFGene2.getHeaderTextCellValue;
 
 /**
  *
@@ -70,7 +67,7 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
     }
 
     public void setDataToChart(JPanel panelHoaDon) {
-        List<HoaDonChiTiet> listCthd = service.getListThongKeDT();
+        List<HoaDonChiTiet> listCthd = service.getListThongKeTD();
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if (txtNgayBD.getCalendar() == null || txtNgayKT.getCalendar() == null) {
             if (listCthd != null) {
@@ -134,8 +131,8 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         table.addCell(new Cell().add("").setFontSize(20f).setBold().setBorder(Border.NO_BORDER));
 
         Table nestedtable = new Table(new float[]{twocol / 2, twocol / 2});
-        nestedtable.addCell(getHeaderTextCell("Ngày: "));
-        nestedtable.addCell(getHeaderTextCellValue(formattedDateTime));
+//        nestedtable.addCell(getHeaderTextCell("Ngày: "));
+//        nestedtable.addCell(getHeaderTextCellValue(formattedDateTime));
 
         table.addCell(new Cell().add(nestedtable).setBorder(Border.NO_BORDER));
 
@@ -158,8 +155,8 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
             String ngayKTDinhDang = dateFormat.format(ngayKT);
 
             Table twoColTable = new Table(twocolumnWidth);
-            twoColTable.addCell(getBillingandCustomCell("Ngày bắt đầu: " + ngayBDDinhDang).setHeight(20f));
-            twoColTable.addCell(getBillingandCustomCell("Ngày kết thúc: " + ngayKTDinhDang).setHeight(20f));
+//            twoColTable.addCell(getBillingandCustomCell("Ngày bắt đầu: " + ngayBDDinhDang).setHeight(20f));
+//            twoColTable.addCell(getBillingandCustomCell("Ngày kết thúc: " + ngayKTDinhDang).setHeight(20f));
             twoColTable.setFont(font);
             document.add(twoColTable);
         }
@@ -191,7 +188,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         jPanel7 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         btnXuatPDF = new javax.swing.JToggleButton();
-        btnSendEmail = new javax.swing.JToggleButton();
         jLabel62 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnTimKiem = new javax.swing.JButton();
@@ -221,14 +217,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         btnXuatPDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnXuatPDFActionPerformed(evt);
-            }
-        });
-
-        btnSendEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/new (1).png"))); // NOI18N
-        btnSendEmail.setText("Gửi Email");
-        btnSendEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendEmailActionPerformed(evt);
             }
         });
 
@@ -268,9 +256,7 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
                             .addGap(5, 5, 5))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                             .addGap(52, 52, 52)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnSendEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnXuatPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnXuatPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(btnTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -289,11 +275,9 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(txtNgayKT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(136, 136, 136)
+                .addGap(70, 70, 70)
                 .addComponent(btnXuatPDF)
-                .addGap(32, 32, 32)
-                .addComponent(btnSendEmail)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(314, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -419,12 +403,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
-    private void btnSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendEmailActionPerformed
-        // TODO add your handling code here:
-        SendEmailView send = new SendEmailView();
-        send.setVisible(true);
-    }//GEN-LAST:event_btnSendEmailActionPerformed
-
     private void btnXuatPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXuatPDFActionPerformed
         try {
             // TODO add your handling code here:
@@ -432,13 +410,12 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Xuất PDF thành công");
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this, "Xuất PDF không thành công");
-            Logger.getLogger(ThongKeSoLuongView.class.getName()).log(Level.SEVERE, null, ex);
+//            Logger.getLogger(ThongKeSoLuongView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnXuatPDFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton btnSendEmail;
     private javax.swing.JButton btnTimKiem;
     private javax.swing.JToggleButton btnXuatPDF;
     private javax.swing.JLabel jLabel3;

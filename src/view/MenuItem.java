@@ -46,7 +46,7 @@ public class MenuItem extends javax.swing.JPanel {
             this.subMenu.add(subMenu[i]);
             subMenu[i].setVisible(false);
         }
-        this.setBackground(new Color(255,51,51));
+        this.setBackground(new Color(0,102,102));
     }
 
     /**

@@ -265,7 +265,6 @@ public class ThuocTinhView extends javax.swing.JPanel {
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Quản lý thuộc tính"));
 
         jLabel1.setText("Mã");
