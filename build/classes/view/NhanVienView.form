@@ -169,17 +169,8 @@
                                               <Component id="txtHoTen" min="-2" pref="265" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel34" min="-2" pref="91" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabel34" min="-2" pref="91" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel35" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
                               </Group>
@@ -192,33 +183,31 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="rdoNghiViec" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="txtUserName" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txtNgayVaoLam" alignment="1" pref="225" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="txtSDT" alignment="1" min="-2" pref="225" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="60" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtPassWord" pref="219" max="32767" attributes="0"/>
+                                  <Component id="txtUserName" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
                               <Component id="btnThemNV" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                               <Component id="btnSuaNV" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
                               <Component id="btnMoiNV" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblAnhNV" min="-2" pref="222" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel36" min="-2" pref="43" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -268,8 +257,6 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txtDiaChi" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                           <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtUserName" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                          <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace pref="19" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -284,17 +271,16 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txtSDT" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtUserName" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtCCCD" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblAnhNV" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="txtCCCD" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="txtPassWord" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -367,11 +353,6 @@
             <Component class="javax.swing.JLabel" name="jLabel35">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tr&#x1ea1;ng th&#xe1;i"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel36">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="&#x1ea2;nh"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtSDT">
@@ -448,21 +429,26 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMoiNVActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblAnhNV">
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblAnhNVMouseClicked"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JTextField" name="txtMaNV">
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtUserName">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel37">
               <Properties>
-                <Property name="text" type="java.lang.String" value="User Name"/>
+                <Property name="text" type="java.lang.String" value="UserName"/>
               </Properties>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="txtNgayVaoLam">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PassWord"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtPassWord">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtUserName">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUserNameActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -686,7 +672,7 @@
                     <Component class="javax.swing.JTable" name="tblNV1">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="9" rowCount="4">
+                          <Table columnCount="10" rowCount="4">
                             <Column editable="false" title="M&#xe3; NV" type="java.lang.Object"/>
                             <Column editable="false" title="M&#xe3; TK" type="java.lang.Object"/>
                             <Column editable="false" title="H&#x1ecd; t&#xea;n" type="java.lang.Object"/>
@@ -695,11 +681,17 @@
                             <Column editable="false" title="S&#x110;T" type="java.lang.Object"/>
                             <Column editable="false" title="CCCD" type="java.lang.Object"/>
                             <Column editable="false" title="Ng&#xe0;y v&#xe0;o l&#xe0;m" type="java.lang.Object"/>
-                            <Column editable="false" title="&#x1ea2;nh" type="java.lang.Object"/>
+                            <Column editable="false" title="UserName" type="java.lang.Object"/>
+                            <Column editable="false" title="PassWord" type="java.lang.Object"/>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                           <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
                               <Title/>
                               <Editor/>

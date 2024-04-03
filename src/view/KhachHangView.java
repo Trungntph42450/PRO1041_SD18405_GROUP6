@@ -222,8 +222,6 @@ public class KhachHangView extends javax.swing.JPanel {
         btnTien = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thiết lập trông tin khách hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         jLabel1.setText("Mã khách hàng: ");
@@ -259,6 +257,11 @@ public class KhachHangView extends javax.swing.JPanel {
                 btnThemMouseClicked(evt);
             }
         });
+        btnThem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThemActionPerformed(evt);
+            }
+        });
 
         btnCapNhat.setBackground(new java.awt.Color(0, 153, 102));
         btnCapNhat.setForeground(new java.awt.Color(255, 255, 255));
@@ -267,6 +270,11 @@ public class KhachHangView extends javax.swing.JPanel {
         btnCapNhat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCapNhatMouseClicked(evt);
+            }
+        });
+        btnCapNhat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCapNhatActionPerformed(evt);
             }
         });
 
@@ -633,13 +641,15 @@ public class KhachHangView extends javax.swing.JPanel {
         if (index < 0) {
             JOptionPane.showMessageDialog(this, "Bạn chưa chọn dòng dữ liệu nào");
         } else {
-            KhachHang kh = this.getFormKH();
-            String ma = tblKhachHang.getValueAt(index, 0).toString();
-            if (serviceKH.sua(kh, ma) > 0) {
-                loadPageKH();
-                JOptionPane.showMessageDialog(this, "Sửa thông tin khách hàng thành công");
-            } else {
-                JOptionPane.showMessageDialog(this, "Sửa thông tin khách hàng thất bại");
+            if (validateKH()) {
+                KhachHang kh = this.getFormKH();
+                String ma = tblKhachHang.getValueAt(index, 0).toString();
+                if (serviceKH.sua(kh, ma) > 0) {
+                    loadPageKH();
+                    JOptionPane.showMessageDialog(this, "Sửa thông tin khách hàng thành công");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Sửa thông tin khách hàng thất bại");
+                }
             }
         }
     }//GEN-LAST:event_btnCapNhatMouseClicked
@@ -741,6 +751,14 @@ public class KhachHangView extends javax.swing.JPanel {
     private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamMoiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLamMoiActionPerformed
+
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnThemActionPerformed
+
+    private void btnCapNhatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapNhatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCapNhatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

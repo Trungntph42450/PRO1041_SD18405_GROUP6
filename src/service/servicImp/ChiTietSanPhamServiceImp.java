@@ -24,7 +24,7 @@ public class ChiTietSanPhamServiceImp implements OnePieceFashtion<ChiTietSanPham
 
     @Override
     public int them(ChiTietSanPham k) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return repo.them(k);
     }
 
     @Override

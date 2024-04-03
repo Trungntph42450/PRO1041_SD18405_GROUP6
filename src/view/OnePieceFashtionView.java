@@ -21,9 +21,9 @@ import javax.swing.JPanel;
  */
 public class OnePieceFashtionView extends javax.swing.JFrame {
 
- Color defaultColor = new Color(255,51,51);// mau do khi buton 
-    Color selectedColor = new Color(255,51,153);// mau khi buton onclick
-    Color enterColor = new Color(255,51,102);
+ Color defaultColor = new Color(0,102,102);// mau do khi buton 
+    Color selectedColor = new Color(202,204,204);// mau khi buton onclick
+    Color enterColor = new Color(204,204,204);
     String tenNV;
     private boolean isAdmin;
 
@@ -91,20 +91,20 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
             }
         });
 
-        MenuItem menuThongKeSL = new MenuItem(iconDot, "Thống kê số lượng", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                changePanelBody(new ThongKeSoLuongView());
-            }
-        });
-        MenuItem menuThongKe3 = new MenuItem(iconDot, "Thống kê khác", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                changePanelBody(new ThongKeKhacView());
-            }
-        });
+//        MenuItem menuThongKeSL = new MenuItem(iconDot, "Thống kê số lượng", new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                changePanelBody(new ThongKeSoLuongView());
+//            }
+//        });
+//        MenuItem menuThongKe3 = new MenuItem(iconDot, "Thống kê khác", new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                changePanelBody(new ThongKeKhacView());
+//            }
+//        });
         // Sản phẩm chung
-        MenuItem menuThongKe = new MenuItem(iconThongKe, "Thống kê", null, menuThongKeDT, menuThongKeSL, menuThongKe3);
+        MenuItem menuThongKe = new MenuItem(iconThongKe, "Thống kê", null, menuThongKeDT);
         //Thanh bên trong sản phẩm
         MenuItem menuSanPham1 = new MenuItem(iconDot, "Sản phẩm", new ActionListener() {
             @Override
@@ -206,8 +206,8 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         MenuItemColor(menuHoaDon);
         MenuItemColor(menuKm);
         MenuItemColor(menuThongKeDT);
-        MenuItemColor(menuThongKeSL);
-        MenuItemColor(menuThongKe3);
+//        MenuItemColor(menuThongKeSL);
+//        MenuItemColor(menuThongKe3);
         MenuItemColor(menuDoiMatKhau);
         MenuItemColor(menuDangXuat);
     }
@@ -272,7 +272,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelHeader.setBackground(new java.awt.Color(255, 51, 51));
+        panelHeader.setBackground(new java.awt.Color(0, 102, 102));
         panelHeader.setPreferredSize(new java.awt.Dimension(561, 50));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/close.png"))); // NOI18N
@@ -324,7 +324,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(null);
 
-        menus.setBackground(new java.awt.Color(255, 51, 51));
+        menus.setBackground(new java.awt.Color(0, 102, 102));
         menus.setLayout(new javax.swing.BoxLayout(menus, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(menus);
 
@@ -336,7 +336,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 925, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 935, Short.MAX_VALUE)
         );
 
         getContentPane().add(panelMenu, java.awt.BorderLayout.LINE_START);
@@ -345,7 +345,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         panelBody.setLayout(new java.awt.BorderLayout());
         getContentPane().add(panelBody, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(1515, 982));
+        setSize(new java.awt.Dimension(1515, 992));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
