@@ -174,7 +174,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         //Câu lệnh thêm vào menu
         if (isAdmin) {
-            addMenu(menuSanPham1, menuThuoctinh, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuThongKe, menuDoiMatKhau, menuDangXuat);
+            addMenu(menuSanPham1, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuThongKe, menuDoiMatKhau, menuDangXuat);
         } else {
             addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuDoiMatKhau, menuDangXuat);
         }

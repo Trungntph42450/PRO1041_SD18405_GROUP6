@@ -19,6 +19,7 @@ public class ThongKeDoanhThuServiceImp implements OnePieceFashtion<HoaDonChiTiet
     ThongKeDoanhThuRepository repo = new ThongKeDoanhThuRepository();
 
     @Override
+
     public List<HoaDonChiTiet> getAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
@@ -48,10 +49,12 @@ public class ThongKeDoanhThuServiceImp implements OnePieceFashtion<HoaDonChiTiet
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public List<HoaDonChiTiet> getListThongKeTD(){
+    public List<HoaDonChiTiet> getListThongKeDT() {
         return repo.getListThongKeDT();
     }
-    public List<HoaDonChiTiet> getListTKDT(Date ngayBd ,Date ngayKt){
-     return repo.getListTKDT(ngayBd, ngayKt);
+
+    public List<HoaDonChiTiet> getListTKDT(Date ngayBd, Date ngayKt) {
+        return repo.getListTKDT(ngayBd, ngayKt);
     }
+
 }
