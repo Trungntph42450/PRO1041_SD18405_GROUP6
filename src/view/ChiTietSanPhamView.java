@@ -4,21 +4,9 @@
  */
 package view;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFileChooser;
@@ -36,22 +24,11 @@ import service.servicImp.ChiTietSanPhamServiceImp;
 import service.servicImp.KichThuocServiceImp;
 import service.servicImp.MauSacServiceImp;
 import service.servicImp.SanPhamServiceImp;
-//
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JTable;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -184,7 +161,6 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
         } else {
             trangThai = false;
         }
-//       String qr= qrCode(txtMaCTSP.getText());
         return new ChiTietSanPham(sp, ms, cl, kt, soLuong, gia, trangThai);
 
     }
@@ -280,23 +256,6 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             cbxChatLieu.addElement(chatLieu);
         }
         cboChatLieu.setModel((ComboBoxModel) cbxChatLieu);
-    }
-
-    public String qrCode(String qrcode) {
-        try {
-            String qrCodeData = qrcode;
-            String filePath = "D:\\PRO1041_DuAn1\\PRO1041_DuAn1\\src\\qr\\" + qrcode + ".png";
-            String charset = "UTF-8";
-            Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
-            hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-            BitMatrix matrix = new MultiFormatWriter().encode(
-                    new String(qrCodeData.getBytes(charset), charset),
-                    BarcodeFormat.QR_CODE, 200, 200, hintMap);
-            MatrixToImageWriter.writeToFile(matrix, filePath.substring(filePath.lastIndexOf(".") + 1), new File(filePath));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return qrcode;
     }
 
     public static CellStyle createStyleForHeader(XSSFSheet sheet) {
@@ -1015,17 +974,6 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Sửa chi tiết sản phẩm thất bại");
             }
         }
-//        String ten = new SanPhamView().getTenSanPham();
-//        ChatLieu cl = (ChatLieu) cbxChatLieu.getSelectedItem();
-//        String tenTimCL = cl.toString();
-//        MauSac ms = (MauSac) cbxMauSac.getSelectedItem();
-//        String tenTimMS = ms.toString();
-//        KichThuoc kt = (KichThuoc) cbxKichThuoc.getSelectedItem();
-//        String tenTimKT = kt.toString();
-//        if (serviceCTSP.checkTrungCTSP(tenTimCL, tenTimMS, tenTimKT, ten)) {
-//            JOptionPane.showMessageDialog(this, "Chi tiết sản phẩm đã tồn tại, vui lòng sửa lại", "Message", 2);
-//            return;
-//        } 
 
 
     }//GEN-LAST:event_btnSuaCTSPActionPerformed

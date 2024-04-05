@@ -4,7 +4,6 @@
  */
 package view;
 
-import java.awt.Color;
 import javax.swing.JOptionPane;
 import service.servicImp.TaiKhoanServiceImp;
 

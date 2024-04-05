@@ -31,8 +31,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import model.HoaDonChiTiet;
@@ -45,7 +43,6 @@ import org.jfree.chart.entity.StandardEntityCollection;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import repository.ThongKeDoanhThuRepository;
-import repository.ThongKeSoLuongRepository;
 import service.servicImp.ThongKeDoanhThuServiceImp;
 
 /**
@@ -131,8 +128,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         table.addCell(new Cell().add("").setFontSize(20f).setBold().setBorder(Border.NO_BORDER));
 
         Table nestedtable = new Table(new float[]{twocol / 2, twocol / 2});
-//        nestedtable.addCell(getHeaderTextCell("Ngày: "));
-//        nestedtable.addCell(getHeaderTextCellValue(formattedDateTime));
 
         table.addCell(new Cell().add(nestedtable).setBorder(Border.NO_BORDER));
 
@@ -155,8 +150,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
             String ngayKTDinhDang = dateFormat.format(ngayKT);
 
             Table twoColTable = new Table(twocolumnWidth);
-//            twoColTable.addCell(getBillingandCustomCell("Ngày bắt đầu: " + ngayBDDinhDang).setHeight(20f));
-//            twoColTable.addCell(getBillingandCustomCell("Ngày kết thúc: " + ngayKTDinhDang).setHeight(20f));
             twoColTable.setFont(font);
             document.add(twoColTable);
         }

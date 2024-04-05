@@ -4,30 +4,18 @@
  */
 package view;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.NotFoundException;
+
 import com.google.zxing.Result;
-import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
-import com.google.zxing.common.HybridBinarizer;
-import java.awt.Dimension;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -37,13 +25,11 @@ import java.util.concurrent.ThreadFactory;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import model.ChatLieu;
 import model.ChiTietSanPham;
 import model.KichThuoc;
 import model.MauSac;
-import model.SanPham;
 import service.servicImp.ChiTietSanPhamServiceImp;
 import javax.swing.JTable;
 import model.Events;
@@ -56,10 +42,7 @@ import service.servicImp.KhachHangServiceImp;
 import service.servicImp.KhuyenMaiServiceImp;
 import service.servicImp.NhanVienServiceImp;
 import util.PDFGene;
-
-import java.awt.*;
 import java.util.Random;
-import javax.swing.*;
 import service.servicImp.ChatLieuServiceImp;
 import service.servicImp.KichThuocServiceImp;
 import service.servicImp.MauSacServiceImp;

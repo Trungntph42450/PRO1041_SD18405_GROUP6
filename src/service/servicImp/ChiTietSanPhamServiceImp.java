@@ -71,13 +71,7 @@ public class ChiTietSanPhamServiceImp implements OnePieceFashtion<ChiTietSanPham
         return repo.updateTrangThaiSoLuong();
     }
 
-    public boolean checkMaQR(String qrCode) {
-        return repo.checkMaQR(qrCode);
-    }
-
-    public int taoQR(String qrCode) {
-        return repo.taoQR(qrCode);
-    }
+  
 
     public List<ChiTietSanPham> getDanhSachSPCT(String maHoadon) {
         return repo.getDanhSachSPCT(maHoadon);

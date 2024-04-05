@@ -4,32 +4,19 @@
  */
 package view;
 
-import java.awt.CardLayout;
-import java.awt.Component;
-import java.io.BufferedInputStream;
+
 import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import model.ChatLieu;
-import model.ChiTietSanPham;
-import model.KichThuoc;
 import model.LoaiSanPham;
-import model.MauSac;
 import model.SanPham;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -242,8 +229,9 @@ public class SanPhamView extends javax.swing.JPanel {
         buttonGroup1.add(rdHetHang);
         rdHetHang.setText("Hết hàng");
 
+        btnClearSP.setBackground(new java.awt.Color(0, 153, 102));
         btnClearSP.setForeground(new java.awt.Color(255, 255, 255));
-        btnClearSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
+        btnClearSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
         btnClearSP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearSPActionPerformed(evt);
@@ -563,10 +551,11 @@ public class SanPhamView extends javax.swing.JPanel {
                         .addComponent(btnThemSP)
                         .addGap(130, 130, 130)
                         .addComponent(btnSuaSP, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(406, 406, 406)
+                        .addGap(98, 98, 98)
                         .addComponent(btnQuayLai)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnXuatFile)))
+                        .addGap(79, 79, 79)
+                        .addComponent(btnXuatFile)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(82, 82, 82))
         );
         pnlSanPhamLayout.setVerticalGroup(
