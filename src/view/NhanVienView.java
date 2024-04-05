@@ -141,6 +141,8 @@ public class NhanVienView extends javax.swing.JPanel {
     public Boolean valid() {
         String SDTVali = "^[0-9]{10}$";
         String CCCDVali = "^[0-9]{12}$";
+        String tenNVVali = "^[a-zA-Z\\s]+$";
+
         if (txtMaNV.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Mã NV trống");
             return false;
@@ -151,6 +153,9 @@ public class NhanVienView extends javax.swing.JPanel {
         }
         if (txtHoTen.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Họ tên trống");
+            return false;
+        } else if (!txtHoTen.getText().trim().matches(tenNVVali)) {
+            JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng họ tên");
             return false;
         }
         if (txtDiaChi.getText().isBlank()) {
@@ -725,8 +730,9 @@ public class NhanVienView extends javax.swing.JPanel {
             }
         });
 
+        btnRSTimNV.setBackground(new java.awt.Color(0, 153, 102));
         btnRSTimNV.setForeground(new java.awt.Color(255, 255, 255));
-        btnRSTimNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
+        btnRSTimNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
         btnRSTimNV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRSTimNVActionPerformed(evt);

@@ -4,7 +4,6 @@
  */
 package view;
 
-
 import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -142,6 +141,8 @@ public class SanPhamView extends javax.swing.JPanel {
     }
 
     public boolean validateSP() {
+        String tenSpVali = "^[a-zA-Z\\s]+$";
+        String xuatXuVali = "^[a-zA-Z\\s]+$";
         if (txtMaSanPham.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Mã trống");
             return false;
@@ -149,9 +150,15 @@ public class SanPhamView extends javax.swing.JPanel {
         if (txtTenSanPham.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Tên trống");
             return false;
+        }else if (!txtTenSanPham.getText().trim().matches(tenSpVali)) {
+            JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên sản phẩm");
+            return false;
         }
         if (txtXuatXu.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Xuất xứ trống");
+            return false;
+        }else if (!txtXuatXu.getText().trim().matches(xuatXuVali)) {
+            JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng xuất xứ ");
             return false;
         }
         return true;
