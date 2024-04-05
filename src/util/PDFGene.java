@@ -154,12 +154,6 @@ public class PDFGene {
         document.add(threeColTable3.setBorder(Border.NO_BORDER));
 
         Table threeColTable4 = new Table(threecolWidth);
-//        Double mucGiam;
-//        if (hd.getVoucher() == null) {
-//            mucGiam = 0.0;
-//        } else {
-//            mucGiam = Double.parseDouble(hd.getVoucher().getMucGiamGia()) / 100;
-//        }
         threeColTable4.addCell(new Cell().add("").setBorder(Border.NO_BORDER));
         threeColTable4.addCell(new Cell().add("Tiền hàng").setTextAlignment(TextAlignment.CENTER).setBorder(Border.NO_BORDER));
         threeColTable4.addCell(new Cell().add(df.format(tong) + " VNĐ").setTextAlignment(TextAlignment.RIGHT).setBorder(Border.NO_BORDER));

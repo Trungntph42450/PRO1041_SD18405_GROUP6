@@ -67,7 +67,7 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
     }
 
     public void setDataToChart(JPanel panelHoaDon) {
-        List<HoaDonChiTiet> listCthd = service.getListThongKeTD();
+        List<HoaDonChiTiet> listCthd = service.getListThongKeDT();
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         if (txtNgayBD.getCalendar() == null || txtNgayKT.getCalendar() == null) {
             if (listCthd != null) {
@@ -187,7 +187,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        btnXuatPDF = new javax.swing.JToggleButton();
         jLabel62 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnTimKiem = new javax.swing.JButton();
@@ -212,14 +211,6 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btnXuatPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/pdf.png"))); // NOI18N
-        btnXuatPDF.setText("Xuất PDF");
-        btnXuatPDF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnXuatPDFActionPerformed(evt);
-            }
-        });
-
         jLabel62.setText("Ngày bắt đầu");
 
         jLabel3.setText("Ngày kết thúc");
@@ -242,24 +233,18 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addGap(17, 17, 17)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel62))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNgayBD, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                                .addComponent(txtNgayKT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGap(5, 5, 5))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                            .addGap(52, 52, 52)
-                            .addComponent(btnXuatPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel62))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtNgayBD, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                    .addComponent(txtNgayKT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(btnTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -275,9 +260,7 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(txtNgayKT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addComponent(btnXuatPDF)
-                .addContainerGap(314, Short.MAX_VALUE))
+                .addContainerGap(407, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -403,21 +386,9 @@ public class ThongKeDoanhThuView extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
-    private void btnXuatPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXuatPDFActionPerformed
-        try {
-            // TODO add your handling code here:
-            genPDF();
-            JOptionPane.showMessageDialog(this, "Xuất PDF thành công");
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(this, "Xuất PDF không thành công");
-//            Logger.getLogger(ThongKeSoLuongView.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnXuatPDFActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTimKiem;
-    private javax.swing.JToggleButton btnXuatPDF;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel9;
