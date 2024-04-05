@@ -5,11 +5,9 @@
 package view;
 
 import java.awt.Component;
-import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,8 +15,6 @@ import java.util.Date;
 import java.util.List;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -187,10 +183,6 @@ public class NhanVienView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Chưa chọn trạng thái");
             return false;
         }
-//        if (!rdoQL.isSelected() && !rdoNV.isSelected()) {
-//            JOptionPane.showMessageDialog(this, "Chưa chọn chức vụ");
-//            return false;
-//        }
         return true;
     }
 

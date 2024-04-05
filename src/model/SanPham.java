@@ -46,6 +46,13 @@ public class SanPham {
         this.tongSP = tongSP;
     }
 
+    public SanPham(String maSanPham, String tenSanPham, LoaiSanPham loaiSanPham, String xuatXu) {
+        this.maSanPham = maSanPham;
+        this.tenSanPham = tenSanPham;
+        this.loaiSanPham = loaiSanPham;
+        this.xuatXu = xuatXu;
+    }
+
     public SanPham(String maSanPham, String tenSanPham, boolean trangThai, LoaiSanPham loaiSanPham, String xuatXu) {
         this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
