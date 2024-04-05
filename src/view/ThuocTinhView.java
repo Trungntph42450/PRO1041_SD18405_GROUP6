@@ -206,13 +206,16 @@ public class ThuocTinhView extends javax.swing.JPanel {
     }
 
     public boolean validateTT() {
+        String tenTTVali = "^[a-zA-Z\\s]+$";
         if (txtTenMa.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Mã trống");
             return false;
         }
-
         if (txtTenThuocTinh.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Tên trống");
+            return false;
+        } else if (!txtTenThuocTinh.getText().trim().matches(tenTTVali)) {
+            JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên thuộc tính");
             return false;
         }
         return true;
@@ -300,8 +303,9 @@ public class ThuocTinhView extends javax.swing.JPanel {
             }
         });
 
+        btnClearThuocTinh.setBackground(new java.awt.Color(0, 153, 102));
         btnClearThuocTinh.setForeground(new java.awt.Color(255, 255, 255));
-        btnClearThuocTinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
+        btnClearThuocTinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
         btnClearThuocTinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearThuocTinhActionPerformed(evt);
@@ -531,8 +535,9 @@ public class ThuocTinhView extends javax.swing.JPanel {
 
         jLabel6.setText("Lọc Kích Thước");
 
+        btnReset.setBackground(new java.awt.Color(0, 153, 102));
         btnReset.setForeground(new java.awt.Color(255, 255, 255));
-        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResetActionPerformed(evt);
@@ -929,7 +934,7 @@ public class ThuocTinhView extends javax.swing.JPanel {
             cboMS.setSelectedIndex(-1);
             cboKT.setSelectedIndex(-1);
             loadCboChatLieu(serviceCl.getAll());
-             loadPageCL();
+            loadPageCL();
         } else if (index == 1) {
             loadCboMauSac(serviceMS.getAll());
             cboCL.setSelectedIndex(-1);
