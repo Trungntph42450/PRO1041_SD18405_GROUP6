@@ -102,7 +102,7 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
 
     }
 
-    public void mtam2() {
+    public void locCtsp() {
         if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
             ChatLieu cl = (ChatLieu) cbxChatLieuLoc.getSelectedItem();
             String tenTimCL = cl.toString();
@@ -1189,19 +1189,19 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (cboLocMau.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
 
         }
@@ -1213,19 +1213,19 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
 
         if (cboLocChat.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
         }
 
@@ -1235,19 +1235,19 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (cboLocKich.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
         }
 
@@ -1255,9 +1255,6 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-//        if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-//            return;
-//        }
         cboLocChat.setSelectedIndex(-1);
         cboLocMau.setSelectedIndex(-1);
         cboLocKich.setSelectedIndex(-1);
