@@ -4,7 +4,6 @@
  */
 package view;
 
-
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.MultiFormatReader;
@@ -118,10 +117,8 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         loadLocChatLieu(serviceCl.getAll());
         loadLocMauSac(serviceMS.getAll());
         loadLocKichThuoc(serviceKT.getAll());
-        
+
     }
-
-
 
     @Override
     public void run() {
@@ -133,7 +130,6 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
             }
 
             Result result = null;
-
 
             if (result != null) {
                 indexHoaDonCho = tblHoaDonCho.getSelectedRow();
@@ -160,7 +156,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                                 maFake = chiTietSanPham.getMaChiTietSanPham();
                                 soLuongFake = Integer.parseInt(input);
                                 if (soLuongFake > chiTietSanPham.getSoLuong()) {
-                                    JOptionPane.showMessageDialog(this, "Số lượng tồn không đủ, vui lòng nhập lại");   
+                                    JOptionPane.showMessageDialog(this, "Số lượng tồn không đủ, vui lòng nhập lại");
                                     return;
                                 } else if (soLuongFake < 1) {
                                     JOptionPane.showMessageDialog(this, "Số lượng không hợp lệ, vui lòng nhập lại");
@@ -229,43 +225,43 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         t.setDaemon(true);
         return t;
     }
-    
-     public void mtam2() {
+
+    public void locCtsp() {
         if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
             ChatLieu cl = (ChatLieu) cbxChatLieuLoc.getSelectedItem();
             String tenTimCL = cl.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocCL(tenList, tenTimCL));
         } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
             MauSac ms = (MauSac) cbxMauSacLoc.getSelectedItem();
             String tenTimMS = ms.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocMS(tenList, tenTimMS));
         } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
             KichThuoc kt = (KichThuoc) cbxKichThuocLoc.getSelectedItem();
             String tenTimKT = kt.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocKT(tenList, tenTimKT));
         } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
             ChatLieu cl = (ChatLieu) cbxChatLieuLoc.getSelectedItem();
             String tenTimCL = cl.toString();
             MauSac ms = (MauSac) cbxMauSacLoc.getSelectedItem();
             String tenTimMS = ms.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocCLMS(tenList, tenTimCL, tenTimMS));
         } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
             MauSac ms = (MauSac) cbxMauSacLoc.getSelectedItem();
             String tenTimMS = ms.toString();
             KichThuoc kt = (KichThuoc) cbxKichThuocLoc.getSelectedItem();
             String tenTimKT = kt.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocMSKT(tenList, tenTimMS, tenTimKT));
         } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
             ChatLieu cl = (ChatLieu) cbxChatLieuLoc.getSelectedItem();
             String tenTimCL = cl.toString();
             KichThuoc kt = (KichThuoc) cbxKichThuocLoc.getSelectedItem();
             String tenTimKT = kt.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLocCLKT(tenList, tenTimCL, tenTimKT));
         } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
             ChatLieu cl = (ChatLieu) cbxChatLieuLoc.getSelectedItem();
@@ -274,13 +270,12 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
             String tenTimMS = ms.toString();
             KichThuoc kt = (KichThuoc) cbxKichThuocLoc.getSelectedItem();
             String tenTimKT = kt.toString();
-            String tenList ="";
+            String tenList = "";
             fillTableChiTietSanPham(serviceCTSP.getListLoc(tenList, tenTimCL, tenTimMS, tenTimKT));
         }
 
     }
 
-    
     public void loadLocChatLieu(List<ChatLieu> list) {
         cbxChatLieuLoc.removeAllElements();
         for (ChatLieu chatLieu : list) {
@@ -1285,6 +1280,7 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
                 fillDonHang2();
                 tinhThua();
             } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, "Vui lòng nhập số nguyên dương");
                 return;
             }
         }
@@ -1561,19 +1557,19 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
 
         if (cboLocChat.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
         }
     }//GEN-LAST:event_cboLocChatActionPerformed
@@ -1586,19 +1582,19 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         // TODO add your handling code here:
         if (cboLocMau.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
 
         }
@@ -1612,19 +1608,19 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
         // TODO add your handling code here:
         if (cboLocKich.getSelectedIndex() != -1) {
             if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() == -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() == -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() == -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             } else if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-                mtam2();
+                locCtsp();
             }
         }
     }//GEN-LAST:event_cboLocKichActionPerformed
@@ -1632,8 +1628,8 @@ public class BanHangView extends javax.swing.JPanel implements Runnable, ThreadF
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
         //        if (cboLocChat.getSelectedIndex() != -1 && cboLocMau.getSelectedIndex() != -1 && cboLocKich.getSelectedIndex() != -1) {
-            //            return;
-            //        }
+        //            return;
+        //        }
         cboLocChat.setSelectedIndex(-1);
         cboLocMau.setSelectedIndex(-1);
         cboLocKich.setSelectedIndex(-1);

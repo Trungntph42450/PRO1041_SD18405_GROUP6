@@ -21,9 +21,9 @@ import javax.swing.JPanel;
  */
 public class OnePieceFashtionView extends javax.swing.JFrame {
 
- Color defaultColor = new Color(0,102,102);// mau do khi buton 
-    Color selectedColor = new Color(202,204,204);// mau khi buton onclick
-    Color enterColor = new Color(204,204,204);
+    Color defaultColor = new Color(0, 102, 102);// mau do khi buton 
+    Color selectedColor = new Color(202, 204, 204);// mau khi buton onclick
+    Color enterColor = new Color(204, 204, 204);
     String tenNV;
     private boolean isAdmin;
 
@@ -80,54 +80,38 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         ImageIcon iconHoaDon = new ImageIcon(getClass().getResource("/icon/bill.png"));
         ImageIcon iconKhuyenMai = new ImageIcon(getClass().getResource("/icon/discount.png"));
         ImageIcon iconDoiMatKhau = new ImageIcon(getClass().getResource("/icon/reset-password.png"));
-        ImageIcon iconDoiHang = new ImageIcon(getClass().getResource("/icon/exchange.png"));
-        ImageIcon iconLichSuDoiHang = new ImageIcon(getClass().getResource("/icon/schedule.png"));
         ImageIcon iconDangXuat = new ImageIcon(getClass().getResource("/icon/power-off.png"));
-        //Tạo thanh thống kê
-        MenuItem menuThongKeDT = new MenuItem(iconDot, "Thống kê doanh thu", new ActionListener() {
+        //Thong ke
+        MenuItem menuThongKe = new MenuItem(iconThongKe, "Thống kê", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 changePanelBody(new ThongKeDoanhThuView());
             }
         });
 
-//        MenuItem menuThongKeSL = new MenuItem(iconDot, "Thống kê số lượng", new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent ae) {
-//                changePanelBody(new ThongKeSoLuongView());
-//            }
-//        });
-//        MenuItem menuThongKe3 = new MenuItem(iconDot, "Thống kê khác", new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent ae) {
-//                changePanelBody(new ThongKeKhacView());
-//            }
-//        });
-        // Sản phẩm chung
-        MenuItem menuThongKe = new MenuItem(iconThongKe, "Thống kê", null, menuThongKeDT);
         //Thanh bên trong sản phẩm
-        MenuItem menuSanPham1 = new MenuItem(iconDot, "Sản phẩm", new ActionListener() {
+        MenuItem menuSanPham1 = new MenuItem(iconSanPham, "Sản phẩm", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 changePanelBody(new SanPhamView());
                 setBackground(selectedColor);
             }
         });
-        MenuItem menuCtsp = new MenuItem(iconDot, "Chi tiết sản phẩm", new ActionListener() {
+        MenuItem menuCtsp = new MenuItem(iconSanPham, "Chi tiết sản phẩm", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 changePanelBody(new ChiTietSanPhamView());
             }
         });
 
-        MenuItem menuThuoctinh = new MenuItem(iconDot, "Thuộc tính", new ActionListener() {
+        MenuItem menuThuoctinh = new MenuItem(iconSanPham, "Thuộc tính sản phẩm", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 changePanelBody(new ThuocTinhView());
             }
         });
         // Sản phẩm chung
-        MenuItem menuMatHang = new MenuItem(iconSanPham, "Mặt hàng", null, menuSanPham1, menuThuoctinh);
+//        MenuItem menuMatHang = new MenuItem(iconSanPham, "Mặt hàng", null, menuSanPham1, menuThuoctinh);
         //Nhân viên
         MenuItem menuNhanVien = new MenuItem(iconNhanVien, "Nhân viên", new ActionListener() {
             @Override
@@ -156,8 +140,6 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
                 changePanelBody(new HoaDonView());
             }
         });
-
-
 
         //Khuyến mại
         MenuItem menuKm = new MenuItem(iconKhuyenMai, "Khuyến mại", new ActionListener() {
@@ -192,12 +174,12 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
 
         //Câu lệnh thêm vào menu
         if (isAdmin) {
-            addMenu(menuThongKe, menuMatHang, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuDoiMatKhau, menuDangXuat);
+            addMenu(menuSanPham1, menuThuoctinh, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuThongKe, menuDoiMatKhau, menuDangXuat);
         } else {
             addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuDoiMatKhau, menuDangXuat);
         }
         MenuItemColor(menuThongKe);
-        MenuItemColor(menuMatHang);
+//        MenuItemColor(menuMatHang);
         MenuItemColor(menuSanPham1);
         MenuItemColor(menuThuoctinh);
         MenuItemColor(menuNhanVien);
@@ -205,9 +187,6 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         MenuItemColor(menuKhachHang);
         MenuItemColor(menuHoaDon);
         MenuItemColor(menuKm);
-        MenuItemColor(menuThongKeDT);
-//        MenuItemColor(menuThongKeSL);
-//        MenuItemColor(menuThongKe3);
         MenuItemColor(menuDoiMatKhau);
         MenuItemColor(menuDangXuat);
     }
