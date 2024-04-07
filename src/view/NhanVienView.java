@@ -141,7 +141,7 @@ public class NhanVienView extends javax.swing.JPanel {
     public Boolean valid() {
         String SDTVali = "^[0-9]{10}$";
         String CCCDVali = "^[0-9]{12}$";
-        String tenNVVali = "^[a-zA-Z\\s]+$";
+        String tenNVVali = "^[\\p{L}\\s]+$";
 
         if (txtMaNV.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Mã NV trống");
@@ -602,12 +602,13 @@ public class NhanVienView extends javax.swing.JPanel {
                             .addComponent(txtPassWord, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                             .addComponent(txtUserName)))
                     .addGroup(jPanel61Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnThemNV)
-                        .addGap(145, 145, 145)
+                        .addGap(163, 163, 163)
                         .addComponent(btnSuaNV)
-                        .addGap(152, 152, 152)
-                        .addComponent(btnMoiNV)))
+                        .addGap(154, 154, 154)
+                        .addComponent(btnMoiNV)
+                        .addGap(255, 255, 255)))
                 .addGap(12, 12, 12))
         );
         jPanel61Layout.setVerticalGroup(
@@ -730,9 +731,8 @@ public class NhanVienView extends javax.swing.JPanel {
             }
         });
 
-        btnRSTimNV.setBackground(new java.awt.Color(0, 153, 102));
         btnRSTimNV.setForeground(new java.awt.Color(255, 255, 255));
-        btnRSTimNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
+        btnRSTimNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/undo.png"))); // NOI18N
         btnRSTimNV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRSTimNVActionPerformed(evt);
