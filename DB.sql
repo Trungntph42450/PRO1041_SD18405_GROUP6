@@ -121,7 +121,6 @@ CREATE TABLE [ChiTietSanPham] (
   [SoLuong] int,
   [Gia] money,
   [TrangThai] bit,
-  qrCode varchar(50),
   PRIMARY KEY ([MaCTSP])
 );
 

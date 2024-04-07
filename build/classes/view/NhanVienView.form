@@ -199,12 +199,13 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="btnThemNV" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
                               <Component id="btnSuaNV" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
                               <Component id="btnMoiNV" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -599,14 +600,11 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnRSTimNV">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="66" green="99" red="0" type="rgb"/>
-                </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/icon/reset.png"/>
+                  <Image iconType="3" name="/icon/undo.png"/>
                 </Property>
               </Properties>
               <Events>
