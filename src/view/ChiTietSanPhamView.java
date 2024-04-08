@@ -276,14 +276,14 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
     }
 
     public boolean validateCTSPs() {
-        if (txtSoLuong.getText().isEmpty()) {
+        if (txtSoLuong.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Số lượng trống");
             return false;
         } else {
             try {
                 int sl = Integer.parseInt(txtSoLuong.getText());
                 if (sl < 0) {
-                    JOptionPane.showMessageDialog(this, "Số lượng phải lớn hơn 0");
+                    JOptionPane.showMessageDialog(this, "Số lượng phải lớn hơn hoặc bằng 0");
                     return false;
                 }
             } catch (Exception e) {
@@ -292,7 +292,7 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             }
         }
 
-        if (txtGia.getText().isEmpty()) {
+        if (txtGia.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Giá trống");
             return false;
         } else {
@@ -967,15 +967,17 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Bạn chưa chọn dòng dữ liệu nào");
             return;
         } else {
-            ChiTietSanPham ctsp = savesCTSP();
-            String ma = tblChiTietSanPham.getValueAt(index, 0).toString();
-            if (serviceCTSP.sua(ctsp, ma) > 0) {
-                serviceCTSP.updateTrangThaiSoLuong();
-                loadPageCTSP();
-                JOptionPane.showMessageDialog(this, "Sửa chi tiết sản phẩm thành công");
+            if (validateCTSPs()) {
+                ChiTietSanPham ctsp = savesCTSP();
+                String ma = tblChiTietSanPham.getValueAt(index, 0).toString();
+                if (serviceCTSP.sua(ctsp, ma) > 0) {
+                    serviceCTSP.updateTrangThaiSoLuong();
+                    loadPageCTSP();
+                    JOptionPane.showMessageDialog(this, "Sửa chi tiết sản phẩm thành công");
 
-            } else {
-                JOptionPane.showMessageDialog(this, "Sửa chi tiết sản phẩm thất bại");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Sửa chi tiết sản phẩm thất bại");
+                }
             }
         }
 

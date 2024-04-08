@@ -214,7 +214,8 @@ public class ThuocTinhView extends javax.swing.JPanel {
         if (txtTenThuocTinh.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Tên trống");
             return false;
-        } else if (!txtTenThuocTinh.getText().trim().matches(tenTTVali)) {
+        }
+        if (!txtTenThuocTinh.getText().trim().matches(tenTTVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên thuộc tính");
             return false;
         }

@@ -18,7 +18,6 @@ public class ChiTietSanPham {
     private int soLuong;
     private double gia;
     private boolean trangThai;
-    private String qrCode;
 
     public ChiTietSanPham() {
     }
@@ -151,13 +150,6 @@ public class ChiTietSanPham {
         this.trangThai = trangThai;
     }
 
-    public String getQrCode() {
-        return qrCode;
-    }
-
-    public void setQrCode(String qrCode) {
-        this.qrCode = qrCode;
-    }
 
     @Override
     public String toString() {

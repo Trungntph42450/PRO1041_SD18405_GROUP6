@@ -91,7 +91,7 @@ public class ChiTietSanPhamRepository {
     public int them(ChiTietSanPham ctsp) {
         try {
             conn = DBConnect.getConnection();
-            sql = "INSERT INTO ChiTietSanPham(MaSanPham,MaMauSac,MaChatLieu,MaKichThuoc,SoLuong,Gia,TrangThai,qrCode) VALUES(?,?,?,?,?,?,?,?)";
+            sql = "INSERT INTO ChiTietSanPham(MaSanPham,MaMauSac,MaChatLieu,MaKichThuoc,SoLuong,Gia,TrangThai) VALUES(?,?,?,?,?,?,?)";
             pst = conn.prepareStatement(sql);
             pst.setObject(1, ctsp.getSanPham().getMaSanPham());
             pst.setObject(2, ctsp.getMauSac().getMaMauSac());
@@ -100,7 +100,6 @@ public class ChiTietSanPhamRepository {
             pst.setObject(5, ctsp.getSoLuong());
             pst.setObject(6, ctsp.getGia());
             pst.setObject(7, ctsp.isTrangThai());
-            pst.setObject(8, ctsp.getQrCode());
             return pst.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -555,35 +554,8 @@ public class ChiTietSanPhamRepository {
         }
     }
 
-    public boolean checkMaQR(String qrCode) {
-        try {
-            Connection conn = DBConnect.getConnection();
-            String sql = "SELECT * FROM ChiTietSanPham WHERE qrCode=?";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, qrCode);
-            rs = pst.executeQuery();
-            if (rs.next()) {
-                return true;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 
-    public int taoQR(String qrCode) {
-        try {
-            conn = DBConnect.getConnection();
-            sql = "UPDATE ChiTietSanPham set qrCode=? where MaCTSP=? ";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, qrCode);
-            pst.setString(2, qrCode);
-            return pst.executeUpdate();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return 0;
-        }
-    }
+
 
     public boolean checkTrungCTSP(String name1, String name2, String name3, String name4) {
         try {

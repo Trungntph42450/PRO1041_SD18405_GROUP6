@@ -44,7 +44,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         setSize(1500, 820);
         this.setLocationRelativeTo(null);
         execute(isAdmin);
-        changePanelBody(new BanHangView());
+        changePanelBody(new SanPhamView());
     }
 
     public void changePanelBody(JPanel panel) {
@@ -176,7 +176,7 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
         if (isAdmin) {
             addMenu(menuSanPham1, menuNhanVien, menuBanHang, menuKhachHang, menuHoaDon, menuKm, menuThongKe, menuDoiMatKhau, menuDangXuat);
         } else {
-            addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuDoiMatKhau, menuDangXuat);
+            addMenu(menuBanHang, menuKhachHang, menuHoaDon, menuDangXuat);
         }
         MenuItemColor(menuThongKe);
 //        MenuItemColor(menuMatHang);
