@@ -4,7 +4,6 @@
  */
 package view;
 
-
 import com.google.zxing.Result;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;

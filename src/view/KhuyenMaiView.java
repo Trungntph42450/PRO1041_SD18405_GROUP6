@@ -121,21 +121,27 @@ public class KhuyenMaiView extends javax.swing.JPanel {
     }
 
     public boolean validateForm() {
-         if (txtMaKM.getText().isEmpty()) {
+        if (txtMaKM.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền mã khuyến mãi");
             return false;
         }
-        if (txtMaKM.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Chưa điền mã khuyến mãi");
+        if (txtMaKM.getText().matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            JOptionPane.showMessageDialog(this, "Mã khuyến mãi không được chứa kí tự đặc biệt");
+            return false;
+        }
+        if (txtMaKM.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã khuyến mãi không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtTenKM.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền tên khuyến mãi");
             return false;
-        } else if (txtTenKM.getText().matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
-            JOptionPane.showMessageDialog(this, "khuyến mãi không được chứa kí tự đặc biệt");
+        }
+        if (txtTenKM.getText().matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            JOptionPane.showMessageDialog(this, "Tên khuyến mãi không được chứa kí tự đặc biệt");
             return false;
-        } else if (txtTenKM.getText().startsWith(" ")) {
+        }
+        if (txtTenKM.getText().startsWith(" ")) {
             JOptionPane.showMessageDialog(this, "Tên khuyến mãi không được bắt đầu bằng khoảng trắng");
             return false;
         }
@@ -492,7 +498,7 @@ public class KhuyenMaiView extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
