@@ -147,18 +147,33 @@ public class KhachHangView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Chưa điền mã khách hàng");
             return false;
         }
+        if (txtMaKhachHang.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã khách hàng không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtTenKhachHang.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền tên khách hàng");
+            System.out.println("HAha");
             return false;
-        } else if (!txtTenKhachHang.getText().trim().matches(tenKHVali)) {
+        }
+        if (!txtTenKhachHang.getText().trim().matches(tenKHVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên khách hàng");
+            return false;
+        }
+        if (txtTenKhachHang.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Tên khách hàng không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtEmail.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền email khách hàng");
             return false;
-        } else if (!txtEmail.getText().trim().matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+        }
+        if (!txtEmail.getText().trim().matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
             JOptionPane.showMessageDialog(this, "Email sai định dạng");
+            return false;
+        }
+        if (txtEmail.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Email không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtNgaySinh.getDate() == null) {
@@ -168,12 +183,21 @@ public class KhachHangView extends javax.swing.JPanel {
         if (txtSoDienThoai.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền số điện thoại");
             return false;
-        } else if (!txtSoDienThoai.getText().trim().matches(SDTVali)) {
+        }
+        if (!txtSoDienThoai.getText().trim().matches(SDTVali)) {
             JOptionPane.showMessageDialog(this, "Vui lòng điền đúng định dạng số điện thoại");
+            return false;
+        }
+        if (txtSoDienThoai.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Số Điện Thoại không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtDiaChi.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền địa chỉ khách hàng");
+            return false;
+        }
+        if (txtDiaChi.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Địa Chỉ không được bắt đầu bằng khoảng trắng");
             return false;
         }
         return true;

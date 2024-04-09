@@ -211,12 +211,20 @@ public class ThuocTinhView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Mã trống");
             return false;
         }
+        if (txtTenMa.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtTenThuocTinh.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Tên trống");
             return false;
         }
         if (!txtTenThuocTinh.getText().trim().matches(tenTTVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên thuộc tính");
+            return false;
+        }
+        if (txtTenThuocTinh.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Tên thuộc tính không được bắt đầu bằng khoảng trắng");
             return false;
         }
         return true;

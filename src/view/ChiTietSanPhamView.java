@@ -1215,6 +1215,8 @@ public class ChiTietSanPhamView extends javax.swing.JPanel {
         cboLocChat.setSelectedItem("Tất cả");
         cboLocMau.setSelectedItem("Tất cả");
         cboLocKich.setSelectedItem("Tất cả");
+        txtTienMin.setText("");
+        txtTienMax.setText("");
         loadPageCTSP();
 
     }//GEN-LAST:event_btnResetActionPerformed

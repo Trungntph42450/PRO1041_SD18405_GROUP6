@@ -147,18 +147,32 @@ public class SanPhamView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Mã trống");
             return false;
         }
+        if (txtMaSanPham.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã sản phẩm không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtTenSanPham.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Tên trống");
             return false;
-        }else if (!txtTenSanPham.getText().trim().matches(tenSpVali)) {
+        }
+        if (!txtTenSanPham.getText().trim().matches(tenSpVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng tên sản phẩm");
+            return false;
+        }
+        if (txtTenSanPham.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Tên sản phẩm không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtXuatXu.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Xuất xứ trống");
             return false;
-        }else if (!txtXuatXu.getText().trim().matches(xuatXuVali)) {
+        }
+        if (!txtXuatXu.getText().trim().matches(xuatXuVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng xuất xứ ");
+            return false;
+        }
+        if (txtXuatXu.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Xuất xứ không được bắt đầu bằng khoảng trắng");
             return false;
         }
         return true;
@@ -617,7 +631,6 @@ public class SanPhamView extends javax.swing.JPanel {
     private void cboLocLSPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboLocLSPMouseClicked
         // TODO add your handling code here:
 
-//
 
     }//GEN-LAST:event_cboLocLSPMouseClicked
 
