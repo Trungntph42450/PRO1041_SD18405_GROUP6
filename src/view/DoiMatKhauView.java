@@ -232,16 +232,34 @@ public class DoiMatKhauView extends javax.swing.JPanel {
 
     private void btnCapNhatMKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCapNhatMKMouseClicked
         // TODO add your handling code here:
+//        if (checkEmpty()) {
+//            String maTK = txtMaTK.getText();
+//            String matKhauHT = new String(txtMatKhauHT.getPassword());
+//            String matKhauMoi = new String(txtMatKhauM.getPassword());
+//            String matKhauMoi2 = new String(txtMatKhauM2.getPassword());
+//            if (checkHopLe(maTK, matKhauHT, matKhauMoi, matKhauMoi2)) {
+//                if (serviceDMK.updatePass(maTK, matKhauMoi) > 0) {
+//                    JOptionPane.showMessageDialog(this, "Đổi mật khẩu thành công");
+//                } else {
+//                    JOptionPane.showMessageDialog(this, "Đổi mật khẩu thất bại");
+//                }
+//            }
+//        }
+//        this.setVisible(true);
         if (checkEmpty()) {
             String maTK = txtMaTK.getText();
             String matKhauHT = new String(txtMatKhauHT.getPassword());
             String matKhauMoi = new String(txtMatKhauM.getPassword());
             String matKhauMoi2 = new String(txtMatKhauM2.getPassword());
-            if (checkHopLe(maTK, matKhauHT, matKhauMoi, matKhauMoi2)) {
-                if (serviceDMK.updatePass(maTK, matKhauMoi) > 0) {
-                    JOptionPane.showMessageDialog(this, "Đổi mật khẩu thành công");
-                } else {
-                    JOptionPane.showMessageDialog(this, "Đổi mật khẩu thất bại");
+
+            int result = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn đổi mật khẩu?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+            if (result == JOptionPane.YES_OPTION) { // Nếu người dùng chọn 'Yes'
+                if (checkHopLe(maTK, matKhauHT, matKhauMoi, matKhauMoi2)) {
+                    if (serviceDMK.updatePass(maTK, matKhauMoi) > 0) {
+                        JOptionPane.showMessageDialog(this, "Đổi mật khẩu thành công");
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Đổi mật khẩu thất bại");
+                    }
                 }
             }
         }

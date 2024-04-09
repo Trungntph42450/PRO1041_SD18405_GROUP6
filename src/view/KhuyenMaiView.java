@@ -100,7 +100,17 @@ public class KhuyenMaiView extends javax.swing.JPanel {
             mucGiam = txtMucGiam.getText() + "VND";
         } else {
             hinhThucGG = false;
-            mucGiam = txtMucGiam.getText() + "%";
+//            mucGiam = txtMucGiam.getText() + "%";
+            try {
+                double phanTram = Double.parseDouble(mucGiam.replace(",", "."));
+                if (phanTram < 0 || phanTram > 99) {
+                    throw new NumberFormatException();
+                }
+                mucGiam = String.format("%.0f%%", phanTram);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Mức giảm giá chỉ được từ 0% đến 99%", "Error", JOptionPane.ERROR_MESSAGE);
+                return null;
+            }
         }
         if (rdKhongDK.isSelected()) {
             txtDieuKienTT.setText(" ");

@@ -141,8 +141,8 @@ public class OnePieceFashtionView extends javax.swing.JFrame {
             }
         });
 
-        //Khuyến mại
-        MenuItem menuKm = new MenuItem(iconKhuyenMai, "Khuyến mại", new ActionListener() {
+        //Khuyến mãi
+        MenuItem menuKm = new MenuItem(iconKhuyenMai, "Khuyến mãi", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 changePanelBody(new KhuyenMaiView());
