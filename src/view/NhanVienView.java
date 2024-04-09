@@ -147,33 +147,60 @@ public class NhanVienView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Mã NV trống");
             return false;
         }
+        if (txtMaNV.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã nhân viên không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtMaTK.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Mã TK trống");
+            return false;
+        }
+        if (txtMaTK.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mã tài khoản không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtHoTen.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Họ tên trống");
             return false;
-        } else if (!txtHoTen.getText().trim().matches(tenNVVali)) {
+        }
+        if (!txtHoTen.getText().trim().matches(tenNVVali)) {
             JOptionPane.showMessageDialog(this, " Vui lòng điền đúng định dạng họ tên");
+            return false;
+        }
+        if (txtHoTen.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Họ Tên không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtDiaChi.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Địa chỉ trống");
             return false;
         }
+        if (txtDiaChi.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Địa chỉ không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtSDT.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Số điện thoại trống");
             return false;
-        } else if (!txtSDT.getText().trim().matches(SDTVali)) {
+        }
+        if (!txtSDT.getText().trim().matches(SDTVali)) {
             JOptionPane.showMessageDialog(this, "Định dạng số điện thoại");
+            return false;
+        }
+        if (txtSDT.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Số điện thoại không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtCCCD.getText().isBlank()) {
             JOptionPane.showMessageDialog(this, "Số căn cước nhân dân trống");
             return false;
-        } else if (!txtCCCD.getText().trim().matches(CCCDVali)) {
+        }
+        if (!txtCCCD.getText().trim().matches(CCCDVali)) {
             JOptionPane.showMessageDialog(this, "Định dạng số căn cước nhân dân");
+            return false;
+        }
+        if (txtCCCD.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Căn cước không được bắt đầu bằng khoảng trắng");
             return false;
         }
         if (txtNgayVaoLam.getDate() == null) {

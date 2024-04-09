@@ -34,9 +34,17 @@ public class DoiMatKhauView extends javax.swing.JPanel {
             txtMatKhauM.requestFocus();
             return false;
         }
+        if (txtMatKhauM.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Mật khẩu mới không được bắt đầu bằng khoảng trắng");
+            return false;
+        }
         if (txtMatKhauM2.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Vui lòng không để trống nhập lại mật khẩu");
             txtMatKhauM2.requestFocus();
+            return false;
+        }
+        if (txtMatKhauM2.getText().startsWith(" ")) {
+            JOptionPane.showMessageDialog(this, "Nhập lại mật khẩu mới không được bắt đầu bằng khoảng trắng");
             return false;
         }
         return true;
