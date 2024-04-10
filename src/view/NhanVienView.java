@@ -9,6 +9,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -205,6 +207,13 @@ public class NhanVienView extends javax.swing.JPanel {
         }
         if (txtNgayVaoLam.getDate() == null) {
             JOptionPane.showMessageDialog(this, "Ngày vào làm trống");
+            return false;
+        }
+        LocalDate ngayVaoLam = txtNgayVaoLam.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate currentDate = LocalDate.now();
+
+        if (ngayVaoLam.isAfter(currentDate)) {
+            JOptionPane.showMessageDialog(this, "Ngày vào làm phải nhỏ hơn ngày hiện tại");
             return false;
         }
         if (!rdoNam.isSelected() && !rdoNu.isSelected()) {
