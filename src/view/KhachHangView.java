@@ -7,6 +7,8 @@ package view;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -153,7 +155,6 @@ public class KhachHangView extends javax.swing.JPanel {
         }
         if (txtTenKhachHang.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Chưa điền tên khách hàng");
-            System.out.println("HAha");
             return false;
         }
         if (!txtTenKhachHang.getText().trim().matches(tenKHVali)) {
@@ -178,6 +179,13 @@ public class KhachHangView extends javax.swing.JPanel {
         }
         if (txtNgaySinh.getDate() == null) {
             JOptionPane.showMessageDialog(this, "Chưa chọn ngày sinh khách hàng");
+            return false;
+        }
+        LocalDate ngaySinh = txtNgaySinh.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate currentDate = LocalDate.now();
+
+        if (ngaySinh.isAfter(currentDate)) {
+            JOptionPane.showMessageDialog(this, "Ngày sinh phải nhỏ hơn ngày hiện tại");
             return false;
         }
         if (txtSoDienThoai.getText().trim().isEmpty()) {
