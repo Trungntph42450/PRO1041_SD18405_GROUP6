@@ -42,7 +42,8 @@ import model.HoaDonChiTiet;
  * @author ADMIN
  */
 public class PDFGene {
-     public void genPDF(List<HoaDonChiTiet> list, HoaDon hd, Double tong, Double tongCuoi, Double dua, Double tra) throws FileNotFoundException, IOException {
+
+    public void genPDF(List<HoaDonChiTiet> list, HoaDon hd, Double tong, Double tongCuoi, Double dua, Double tra) throws FileNotFoundException, IOException {
         LocalDateTime currentDateTime = LocalDateTime.now();
 
         // Định dạng ngày giờ theo ý muốn
@@ -83,7 +84,7 @@ public class PDFGene {
         barcode.setCode(hd.getMaHoaDon());
         com.itextpdf.layout.element.Image img = new com.itextpdf.layout.element.Image(barcode.createFormXObject(Color.BLACK, Color.BLACK, pdfDocument)).setBorder(Border.NO_BORDER);
 
-        table.addCell(new Cell().add("Invoice").setFontSize(20f).setBold().setBorder(Border.NO_BORDER));
+        table.addCell(new Cell().add("").setFontSize(20f).setBold().setBorder(Border.NO_BORDER));
         Table nestedtable = new Table(new float[]{twocol / 2, twocol / 2});
         nestedtable.addCell(getHeaderTextCell("Số hóa đơn: "));
         nestedtable.addCell(new Cell().add(img).setBorder(Border.NO_BORDER));
@@ -92,7 +93,7 @@ public class PDFGene {
 
         table.addCell(new Cell().add(nestedtable).setBorder(Border.NO_BORDER));
 
-        Border gb = new SolidBorder(Color.GRAY, 1f);
+        Border gb = new SolidBorder(Color.BLUE, 1f);
         Table divider = new Table(fullwidth);
         divider.setBorder(gb);
 
@@ -122,7 +123,7 @@ public class PDFGene {
         document.add(oneColTable.setMarginBottom(10f));
 
         Table tableDevider = new Table(fullwidth);
-        Border dgb = new DashedBorder(Color.GRAY, 0.5f);
+        Border dgb = new DashedBorder(Color.BLUE, 0.5f);
         document.add(tableDevider.setBorder(dgb));
 
         Paragraph productPara = new Paragraph("Sản phẩm");
@@ -187,11 +188,9 @@ public class PDFGene {
 
         document.add(tableDevider.setBorder(dgb));
         document.add(new Paragraph("\n"));
-        document.add(divider.setBorder(new SolidBorder(Color.GRAY, 1)).setMarginBottom(15f));
-        document.add(new Paragraph("Điều khoản và dịch vụ").setBold().setFont(font).setFontSize(15f));
-        document.add(new Paragraph("1. Người bán không chịu trách nhiệm với bất kỳ tổn thất trực tiếp hay gián tiếp nào do người mua gây ra.").setFont(font));
-        document.add(new Paragraph("2. Thời hạn đổi sản phẩm do lỗi bên phía người bán là bảy (7) ngày kể từ ngày mua.").setFont(font));
-
+        document.add(divider.setBorder(new SolidBorder(Color.BLUE, 1)).setMarginBottom(15f));
+        Paragraph centeredPara = new Paragraph("One Piece Fashtion xin cảm ơn quý khách đã tin tưởng và ủng hộ.").setFont(font).setTextAlignment(TextAlignment.CENTER);
+        document.add(centeredPara);
         document.close();
 
         try {
